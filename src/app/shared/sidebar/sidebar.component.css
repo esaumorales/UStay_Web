@@ -1,6 +1,6 @@
 /* sidebar.component.css */
 nav {
-  width: 250px;
+  width: 150px;
   height: 100vh;
   background-color: #333;
   color: white;
@@ -14,7 +14,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 10px 0;
+  margin: 4vw 0;
 }
 
 nav ul li a {
