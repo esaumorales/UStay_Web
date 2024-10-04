@@ -1,0 +1,52 @@
+{
+  "userList": [
+    {
+      "userId": 121,
+      "userName": "juanito",
+      "userEmail": "juanito@gmail.com",
+      "userPassword": "123"
+    },
+    {
+      "userId": 122,
+      "userName": "juanito",
+
+      "userEmail": "juanito2@gmail.com",
+      "userPassword": "1234"
+    },
+    {
+      "userId": 123,
+      "userName": "juanito",
+      "userEmail": "juanito3@gmail.com",
+      "userPassword": "123"
+    }
+  ],
+
+  "createUser": [
+    {
+        "userId": 121,
+        "userName": "juanito",
+        "userEmail": "juanito@gmail.com",
+        "userPassword": "123"
+      }
+  ],
+  "updateUser": [
+    {
+        "userId": 121,
+        "userName": "juanito",
+        "userEmail": "juanito@gmail.com",
+        "userPassword": "123"
+    }
+  ],
+  "deleteUser": [
+    {
+      "result": true,
+      "data": "userId: 121",
+      "userName": {
+        "userId": 121,
+        "userName": "juanito",
+        "userEmail": "juanito@gmail.com",
+        "userPassword": "123"
+      }
+    }
+  ]
+}
