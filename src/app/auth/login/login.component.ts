@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 export class USER {
@@ -19,6 +19,15 @@ export class USER {
     this.userName = '';
   }
 }
+export class USERSignUp {
+  userEmail: string;
+  userPassword: string;
+
+  constructor() {
+    this.userEmail = '';
+    this.userPassword = '';
+  }
+}
 
 @Component({
   selector: 'app-login',
@@ -32,11 +41,25 @@ export default class LoginComponent implements OnInit {
   signInButton!: HTMLElement;
   container!: HTMLElement;
 
+  
   userObj: USER = new USER();
+  userSignUp: USERSignUp = new USERSignUp();
   http = inject(HttpClient);
   userList$: Observable<USER[]> = new Observable<USER[]>();
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private router: Router // Segundo "constructor" combinado
+  ) {
+    // Lógica condicional según el servicio que necesites usar
+    if (isPlatformBrowser(this.platformId)) {
+      console.log('Estamos en el navegador');
+    }
+    if (router) {
+      console.log('Router disponible', router);
+    }
+  }
 
   ngOnInit(): void {
     // Verifica si estamos en un entorno del navegador
@@ -64,15 +87,79 @@ export default class LoginComponent implements OnInit {
         // Procesar la respuesta aquí
       });
   }
-  onSaveUser(){
-
-    this.http.get<USER>("http://localhost:3000/createUser").subscribe((res:USER)=>{
-      alert("Usuario Creado")
-
-    })
+  onSaveUser() {
+    // Obtener la lista de usuarios existentes
+    this.http.get<USER[]>('http://localhost:3000/userList').subscribe((existingUsers: USER[]) => {
+      // Determinar el máximo userId existente
+      const maxId = existingUsers.length > 0 
+        ? existingUsers.reduce((max, user) => Math.max(max, user.userId), 0) 
+        : 0;
+  
+      // Asignar el siguiente userId (secuencial)
+      this.userObj.userId = maxId + 1; 
+  
+      // Crear el objeto de usuario a guardar
+      const userToSave = {
+        userId: this.userObj.userId,
+        userEmail: this.userObj.userEmail,
+        userPassword: this.userObj.userPassword,
+        userName: this.userObj.userName
+      };
+  
+      // Hacer la solicitud POST para guardar el nuevo usuario
+      this.http
+        .post<USER>('http://localhost:3000/userList', userToSave)
+        .subscribe((res: USER) => {
+          alert('Usuario Creado');
+        }, error => {
+          console.error('Error creando usuario:', error);
+          alert('Error al crear el usuario. Por favor, inténtelo más tarde.');
+        });
+    }, error => {
+      console.error('Error al obtener usuarios:', error);
+    });
+  }
+  
+  
+  
+  oneLogin() {
+    this.http.get<USER[]>('http://localhost:3000/userList')
+      .subscribe(users => {
+        const isUserPresent = users.find(user =>
+          user.userEmail === this.userSignUp.userEmail &&
+          user.userPassword === this.userSignUp.userPassword
+        );
+  
+        if (isUserPresent) {
+          alert('¡Bienvenido de nuevo!');
+          localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
+          this.router.navigateByUrl('/home');
+        } else {
+          alert('Usuario no encontrado');
+        }
+      }, error => {
+        console.error('Error fetching users:', error);
+        alert('Error al intentar iniciar sesión. Por favor, inténtelo más tarde.');
+      });
+  }
+  
     // this.http.post<USER>("http://localhost:3000/createUser", this.userObj).subscribe((res:USER)=>{
     //   alert("Usuario Creado")
 
     // })
   }
-}
+  // Usando Local Storage
+  //   oneRegister() {
+  //     debugger;
+  //     const localUser = localStorage.getItem('angular17users');
+  //     if(localUser != null){
+  //       const users = JSON.parse(localUser);
+  //       users.push(this.userSignUp);
+  //       localStorage.setItem('angular17users', JSON.stringify(users))
+  //     } else{
+  //       const users = [];
+  //       users.push(this.userSignUp);
+  //       localStorage.setItem('angular17users', JSON.stringify(users))
+  //     }
+  //     alert('Usuario Registrado Exitosacmente')
+  //   }

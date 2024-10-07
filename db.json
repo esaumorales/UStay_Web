@@ -1,40 +1,32 @@
 {
   "userList": [
     {
-      "userId": 121,
+      "userId": 1,
       "userName": "juanito",
       "userEmail": "juanito@gmail.com",
       "userPassword": "123"
     },
     {
-      "userId": 122,
-      "userName": "juanito",
-
-      "userEmail": "juanito2@gmail.com",
-      "userPassword": "1234"
-    },
+      "userId": 2,
+      "userEmail": "jose.morales@upeu.edu.pe",
+      "userPassword": "123",
+      "userName": "Esa"
+    }
+  ],
+  "createUser": [
     {
-      "userId": 123,
+      "userId": 121,
       "userName": "juanito",
-      "userEmail": "juanito3@gmail.com",
+      "userEmail": "juanito@gmail.com",
       "userPassword": "123"
     }
   ],
-
-  "createUser": [
-    {
-        "userId": 121,
-        "userName": "juanito",
-        "userEmail": "juanito@gmail.com",
-        "userPassword": "123"
-      }
-  ],
   "updateUser": [
     {
-        "userId": 121,
-        "userName": "juanito",
-        "userEmail": "juanito@gmail.com",
-        "userPassword": "123"
+      "userId": 121,
+      "userName": "juanito",
+      "userEmail": "juanito@gmail.com",
+      "userPassword": "123"
     }
   ],
   "deleteUser": [

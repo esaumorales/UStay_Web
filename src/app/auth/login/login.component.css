@@ -237,3 +237,25 @@ a {
 a, social{
 
 }
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.success {
+  background-color: #4caf50;
+}
+
+.error {
+  background-color: #f44336;
+}
+
+.show {
+  opacity: 1;
+}

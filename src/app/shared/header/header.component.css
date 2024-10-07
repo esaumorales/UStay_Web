@@ -1,12 +1,54 @@
 /* header.component.css */
-header {
-  height: 60px;
-  background-color: #f4f4f4;
+nav {
+  height : 60px;
+  width  : 100%;
   padding: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 24px;
+/* --------------------------- */
+.logo {
+  display    : flex;
+  gap        : 1px;
+  align-items: end;
+}
+
+.logo span {
+  cursor     : default;
+  font-family: 'Montserrat', sans-serif;
+  font-size  : 1.8em;
+}
+
+.logoStay {
+  color      : white;
+  text-align : center;
+  position   : relative;
+  top        : 7px;
+  font-weight: bold;
+}
+
+
+.container {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  padding        : 10px 20px;
+}
+
+.options ul {
+  list-style: none;
+  display   : flex;
+  margin    : 0;
+  padding   : 0;
+  display   : flex;
+  gap       : 16px;
+}
+
+options li {
+  margin-left: 20px;
+  cursor     : pointer;
+
+}
+
+.bi {
+  color: white;
 }
