@@ -9,14 +9,16 @@
       <div class="social-container">
         <!-- <a href="https://www.facebook.com/moisesdaniel.moralesguillen.3" class="social"><i
             class="fab fa-facebook-f"></i></a> -->
-        <a href="https://accounts.google.com/v3/signin/identifier?continue=http%3A%2F%2Fsupport.google.com%2Fanswer%2F2451065%3Fhl%3Den&ec=GAZAdQ&hl=en&ifkv=ARpgrqetXtEjRCENX1gOHLDpLNx-6cnbYKbrTFEMyRKldAwuncVJE7nAdFtbIm2KsrQQd4O85A2mMQ&passive=true&sjid=16239775993809780154-NA&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1496744376%3A1726609424634037&ddm=0"
+        <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=ARpgrqfjATToTDebvPu-woym1AVz_lI-2L0sSUPBv9SxGdolx4Vy0LiXdg4HzS0cYLN5eV-emB2PJg&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S440237861%3A1728328211678235&ddm=1"
           class="social"><i class="fab fa-google-plus-g"></i></a>
         <!-- <a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
           class="social"><i class="fa-brands fa-github"></i></a> -->
       </div>
       <span>Use tu email para registrarte</span>
-      <input type="text" placeholder="Name" [(ngModel)]="userObj.userName" name="userName" required />
+      <input type="text" placeholder="Nombre" [(ngModel)]="userObj.userName" name="userName" required />
+      <input type="text" placeholder="Apellido" [(ngModel)]="userObj.userFirtsName" name="userFirtsName" required />
       <input type="email" placeholder="Email" [(ngModel)]="userObj.userEmail" name="userEmail" required />
+      <input type="password" placeholder="Password" [(ngModel)]="userObj.userPassword" name="userPassword" required />
       <input type="password" placeholder="Password" [(ngModel)]="userObj.userPassword" name="userPassword" required />
       <button (click)="onSaveUser()">Registrarse</button>
     </form>

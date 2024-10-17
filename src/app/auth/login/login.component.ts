@@ -11,12 +11,14 @@ export class USER {
   userEmail: string;
   userPassword: string;
   userName: string;
+  userFirtsName: string;
 
   constructor() {
     this.userId = 0;
     this.userEmail = '';
     this.userPassword = '';
     this.userName = '';
+    this.userFirtsName = '';
   }
 }
 export class USERSignUp {
@@ -41,7 +43,7 @@ export default class LoginComponent implements OnInit {
   signInButton!: HTMLElement;
   container!: HTMLElement;
 
-  
+
   userObj: USER = new USER();
   userSignUp: USERSignUp = new USERSignUp();
   http = inject(HttpClient);
@@ -91,21 +93,22 @@ export default class LoginComponent implements OnInit {
     // Obtener la lista de usuarios existentes
     this.http.get<USER[]>('http://localhost:3000/userList').subscribe((existingUsers: USER[]) => {
       // Determinar el máximo userId existente
-      const maxId = existingUsers.length > 0 
-        ? existingUsers.reduce((max, user) => Math.max(max, user.userId), 0) 
+      const maxId = existingUsers.length > 0
+        ? existingUsers.reduce((max, user) => Math.max(max, user.userId), 0)
         : 0;
-  
+
       // Asignar el siguiente userId (secuencial)
-      this.userObj.userId = maxId + 1; 
-  
+      this.userObj.userId = maxId + 1;
+
       // Crear el objeto de usuario a guardar
       const userToSave = {
         userId: this.userObj.userId,
         userEmail: this.userObj.userEmail,
         userPassword: this.userObj.userPassword,
-        userName: this.userObj.userName
+        userName: this.userObj.userName,
+        userFirtsName: this.userObj.userFirtsName
       };
-  
+
       // Hacer la solicitud POST para guardar el nuevo usuario
       this.http
         .post<USER>('http://localhost:3000/userList', userToSave)
@@ -119,9 +122,9 @@ export default class LoginComponent implements OnInit {
       console.error('Error al obtener usuarios:', error);
     });
   }
-  
-  
-  
+
+
+
   oneLogin() {
     this.http.get<USER[]>('http://localhost:3000/userList')
       .subscribe(users => {
@@ -129,7 +132,7 @@ export default class LoginComponent implements OnInit {
           user.userEmail === this.userSignUp.userEmail &&
           user.userPassword === this.userSignUp.userPassword
         );
-  
+
         if (isUserPresent) {
           alert('¡Bienvenido de nuevo!');
           localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
@@ -142,7 +145,7 @@ export default class LoginComponent implements OnInit {
         alert('Error al intentar iniciar sesión. Por favor, inténtelo más tarde.');
       });
   }
-  
+
     // this.http.post<USER>("http://localhost:3000/createUser", this.userObj).subscribe((res:USER)=>{
     //   alert("Usuario Creado")
 

@@ -3,30 +3,46 @@
     {
       "userId": 1,
       "userName": "juanito",
+      "userFirtsName": "Rocks",
       "userEmail": "juanito@gmail.com",
-      "userPassword": "123"
+      "userPassword": "123",
+      "id": "5691"
     },
     {
+      "id": "5315",
       "userId": 2,
-      "userEmail": "jose.morales@upeu.edu.pe",
+      "userEmail": "esa",
+      "userPassword": "esa",
+      "userName": "Esa",
+      "userFirtsName": "esa"
+    },
+    {
+      "id": "79ec",
+      "userId": 3,
+      "userEmail": "a@gmail.com",
       "userPassword": "123",
-      "userName": "Esa"
+      "userName": "Esa",
+      "userFirtsName": "Mora"
     }
   ],
   "createUser": [
     {
-      "userId": 121,
+      "userId": 1,
       "userName": "juanito",
+      "userFirtsName": "Rocks",
       "userEmail": "juanito@gmail.com",
-      "userPassword": "123"
+      "userPassword": "123",
+      "id": "cd71"
     }
   ],
   "updateUser": [
     {
-      "userId": 121,
+      "userId": 1,
       "userName": "juanito",
+      "userFirtsName": "Rocks",
       "userEmail": "juanito@gmail.com",
-      "userPassword": "123"
+      "userPassword": "123",
+      "id": "6d9f"
     }
   ],
   "deleteUser": [
@@ -34,11 +50,13 @@
       "result": true,
       "data": "userId: 121",
       "userName": {
-        "userId": 121,
+        "userId": 1,
         "userName": "juanito",
+        "userFirtsName": "Rocks",
         "userEmail": "juanito@gmail.com",
         "userPassword": "123"
-      }
+      },
+      "id": "97c3"
     }
   ]
 }

@@ -33,6 +33,7 @@
     "primeng": "^17.18.11",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "ustay-web": "file:",
     "zone.js": "~0.14.2"
   },
   "devDependencies": {
