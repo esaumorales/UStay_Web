@@ -5,7 +5,6 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import swal from 'sweetalert';
 import Swal from 'sweetalert2';
 
 export class USER {
@@ -115,7 +114,7 @@ export default class LoginComponent implements OnInit {
       this.http
         .post<USER>('http://localhost:3000/userList', userToSave)
         .subscribe((res: USER) => {
-          this.registrado()
+    this.registrado()
         }, error => {
           console.error('Error creando usuario:', error);
           alert('Error al crear el usuario. Por favor, inténtelo más tarde.');
@@ -139,9 +138,12 @@ export default class LoginComponent implements OnInit {
           localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
           this.router.navigateByUrl('/home');
           this.ingreso()
-        } else {
+        } else if (this.userSignUp.userEmail === "fallo") {
+          this.fallo();
+        }else{
           this.error();
         }
+        
       }, error => {
         console.error('Error fetching users:', error);
         alert('Error al intentar iniciar sesión. Por favor, inténtelo más tarde.');
@@ -165,6 +167,24 @@ error(){
     title: "Oops...",
     text: "Usuario no encontrado!",
     footer: '<a href="#">¿Has olvidado tu contraseña?</a>'
+  });
+}
+
+fallo(){
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
+  Toast.fire({
+    icon: "warning",
+    title: "Intentelo más tarde"
   });
 }
 
