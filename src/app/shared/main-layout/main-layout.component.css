@@ -9,6 +9,7 @@
 } */
 
 router-outlet {
+  height: 60px;
   flex-grow: 1;
   padding: 20px;
   background-color: red;
@@ -26,4 +27,66 @@ app-home{
   width: 100%;
   height: 100%;
   background-color: aqua;
+}
+
+.content_Advertisements{
+  padding-top: 12px;
+  width: 100%;
+  height: 316px;
+  align-items: center; 
+}
+
+.contenido{
+  background-color: #EDEDED;
+}
+
+.page{
+  margin-left: 1%;
+  background-color: #fff;
+  width: 98%;
+  border-radius: 15px;
+  height: 35px;
+}
+
+.Advertisements{
+  margin-top: 15px;
+  margin-left: 1%;
+  background-color: #fff;
+  width: 98%;
+  height: 240px;
+  border-radius: 15px;
+}
+
+.content_filter{
+  background-color: #fff;
+  width: 16%;
+  height: 100ch;
+  border-radius: 15px;
+}
+
+.content_cuarto{
+  /* background-color: #fff; */
+  margin-left: 16px;
+  width: 82%;
+  height: 100ch;
+  border-radius: 15px;  
+}
+
+.order_by_cuarto{
+  background-color: #fff;
+  height: 72px;
+  border-radius: 12px;
+  
+}
+
+.cuarto{
+  margin-top: 20px;
+  background-color: #fff;
+  height: 90%;
+  border-radius: 12px;
+}
+
+.menu{
+  display: flex;
+  margin-top: 12px;
 }
