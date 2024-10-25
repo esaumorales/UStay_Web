@@ -35,7 +35,7 @@
       <span>Use su cuenta</span>
       <input type="email" placeholder="Email" name="Email" [(ngModel)]="userSignUp.userEmail" required/>
       <input type="password" placeholder="Password" name="Password" [(ngModel)]="userSignUp.userPassword"/>
-      <a href="#">¿Olvido su Contraseña?</a>
+      <a (click)="forgetPassword()">¿Olvido su Contraseña?</a>
       <button (click)="oneLogin()">Iniciar Sesion</button>
     </form>
   </div>
@@ -48,7 +48,7 @@
         <button class="ghost" id="signIn">Iniciar Sesion</button>
       </div>
       <div class="overlay-panel overlay-right">
-        <img src="../../../assets/photos/LOGOS.png" width="150px" height="150px">git
+        <img src="../../../assets/photos/LOGOS.png" width="150px" height="150px">
         <h1>¡Hola, Amigo!</h1>
         <p>“Encuentre el cuarto que usted desee al mejor precio mas comodo”</p>
         <button class="ghost" id="signUp" (click)="onSaveUser" >Registrate</button>
@@ -56,7 +56,3 @@
     </div>
   </div>
 </div>
-
-<footer>
-
-</footer>

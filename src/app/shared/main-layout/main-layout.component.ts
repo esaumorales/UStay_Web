@@ -7,7 +7,7 @@ import HomeComponent from '../../home/home.component';
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [RouterOutlet,SidebarComponent,HeaderComponent,HomeComponent],
+  imports: [RouterOutlet,HeaderComponent,HomeComponent],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.css'
 })

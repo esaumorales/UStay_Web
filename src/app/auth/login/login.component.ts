@@ -150,6 +150,11 @@ export default class LoginComponent implements OnInit {
       });
   }
 
+  forgetPassword(){
+    console.log("Hola")
+    this.router.navigateByUrl('/recover-password')
+  }
+
 ingreso(){
   Swal.fire({
     position: "center",
