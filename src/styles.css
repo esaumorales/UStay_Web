@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'Just Another Hand';
+    src: url('/assets/font/Just_Another_Hand/JustAnotherHand-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Public Sans Variable';
+    src: url('/assets/font/Public_Sans/PublicSans-VariableFont_wght.ttf'),
+        url('/assets/font/Public_Sans/PublicSans-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Londrina Solid';
+    src: url('/assets/font/Londrina_Solid/LondrinaSolid-Black.ttf'),
+        url('/assets/font/Londrina_Solid/LondrinaSolid-Light.ttf'),
+        url('/assets/font/Londrina_Solid/LondrinaSolid-Regular.ttf'),
+        url('/assets/font/Londrina_Solid/LondrinaSolid-Thin.ttf');
+}
+
 * { margin: 0; padding: 0; box-sizing: content-box; }
 
 body {
