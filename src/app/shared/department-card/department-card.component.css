@@ -1,6 +1,5 @@
 .card {
     padding: 16px;
-    width: 200px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -29,6 +28,15 @@
     right: 10px;
 }
 
+.icon__love.i-love svg {
+    filter: drop-shadow(0px 0px 2px #ff0000);
+    -webkit-filter: drop-shadow(0px 0px 2px #ff0000);
+}
+
+.icon__love.i-love path {
+    fill: red;
+}
+
 .card__body {
     margin-top: 10px;
 }
@@ -46,15 +54,39 @@
     align-items: center;
 }
 
+.profile__name {
+    max-width: 90px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
 .avatar {
+    position: relative;
     height: 40px;
     width: 40px;
-    background-color: #afafaf;
+    background-color: #02005f;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     border-radius: 999px;
     -webkit-border-radius: 999px;
     -moz-border-radius: 999px;
     -ms-border-radius: 999px;
     -o-border-radius: 999px;
+}
+
+.avatar__img {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+}
+
+.avatar__letter {
+    color: white;
+    font-weight: 700;
 }
 
 .valuate {
