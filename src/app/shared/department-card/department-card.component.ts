@@ -11,4 +11,6 @@ import { CommonModule } from '@angular/common';
 })
 export class DepartmentCardComponent {
   @Input({ required: true }) department!: Department;
+  @Input() sequence!: number;
+  @Input() hasButtonActions: boolean = false;
 }

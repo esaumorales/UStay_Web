@@ -22,6 +22,24 @@
     -o-border-radius: 12px;
 }
 
+.card__image--order {
+    background-color: #FFFFFFCC;
+    color: #4F4F4FCC;
+    font-weight: 500;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    display: grid;
+    place-content: center;
+    border-radius: 999px;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    -ms-border-radius: 999px;
+    -o-border-radius: 999px;
+}
+
 .icon__love {
     position: absolute;
     top: 10px;
@@ -125,4 +143,46 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+}
+
+.card__action {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+    font-size: 12px;
+}
+
+.btn-action {
+    user-select: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    
+    transition: background-color .3s;
+    -webkit-transition: background-color .3s;
+    -moz-transition: background-color .3s;
+    -ms-transition: background-color .3s;
+    -o-transition: background-color .3s;
+}
+
+.btn-action:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-action:active {
+    background-color: #c0c0c0;
+}
+
+.btn-action svg {
+    height: 16px;
+    width: fit-content;
 }
