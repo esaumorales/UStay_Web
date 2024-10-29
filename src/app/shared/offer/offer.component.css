@@ -1,0 +1,222 @@
+.offer {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.offer__header {
+    position: relative;
+    background-color: #FFBB00CC;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.offer__header--left,
+.offer__header--right {
+    height: 100%;
+    width: auto;
+    background-size: cover;
+}
+
+.offer__header--left {
+    background-image: url('/assets/img/offer/header/left-header-offer.PNG');
+    background-position: right bottom;
+}
+
+.offer__header--right {
+    background-image: url('/assets/img/offer/header/right-header-offer.PNG');
+    background-position: left;
+}
+
+.offer__header--main {
+    position: relative;
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer__header--after,
+.offer__header--before {
+    position: absolute;
+    height: 10px;
+}
+
+.offer__header--after {
+    z-index: 3;
+    bottom: 0;
+    left: 10%;
+}
+
+.offer__header--before {
+    z-index: 1;
+    top: 0;
+    right: 10%;
+}
+
+.offer__header--main h1 {
+    z-index: 2;
+    margin: 0px;
+    position: relative;
+    font-family: 'Public Sans Variable',Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    text-wrap: nowrap;
+    color: #242424;
+    text-shadow: -5px 6px 0 #0000002a;
+}
+
+.offer__content {
+    position: relative;
+    background: linear-gradient(238.07deg, #FFCB3C -1.97%, #EC651D 28.11%, #EE6F20 46.09%, #FFCB3C 93.37%);
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    padding: 20px 10px;
+    gap: 10px;
+}
+
+.offer__content--after {
+    position: absolute;
+    top: 20%;
+    height: 50%;
+}
+
+.offer__content--before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+}
+
+.motivator {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.motivator__title {
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.motivator__title h3 {
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Just Another Hand',Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 70px;
+    text-align: center;
+}
+
+.motivator__title--border-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40%;
+}
+
+.motivator__title--border-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 40%;
+}
+
+.motivator__img {
+    width: 100%;
+}
+
+.motivator__phrase {
+    background: #81007F;
+    padding: 10px 0px;
+    width: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    text-wrap: nowrap;
+    font-family: 'Londrina Solid',Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    box-shadow: 8px 8px 0 #B069E9;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.divider {
+    background-color: white;
+    width: 1px;
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+.carousel__content {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.timer {
+    margin-bottom: 0;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.timer__item {
+    background-color: #FFFFFFB2;
+    height: 8px;
+    width: 8px;
+    border-radius: 999px;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    -ms-border-radius: 999px;
+    -o-border-radius: 999px;
+}
+
+.timer__item.active {
+    background-color: #000615;
+}
+
+@media (width > 700px) {
+    .offer__header--main h1 {
+        font-size: 30px;
+    }
+
+    .offer__header--after,
+    .offer__header--before {
+        height: 15px;
+    }
+}
+
+@media (width > 800px) {
+    .offer__header--main h1 {
+        font-size: 40px;
+    }
+
+    .offer__header--after,
+    .offer__header--before {
+        height: 20px;
+    }
+}
+
+@media (width > 1400px) {
+    .offer__header--main h1 {
+        font-size: 80px;
+    }
+
+    .offer__header--after,
+    .offer__header--before {
+        height: 30px;
+    }
+}
