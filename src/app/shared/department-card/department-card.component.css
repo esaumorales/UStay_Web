@@ -1,6 +1,7 @@
 .card {
     padding: 16px;
-    width: 200px;
+    margin: 0 16px 0px 8px;
+    width: 280px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;

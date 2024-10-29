@@ -23,6 +23,14 @@
       "userPassword": "123",
       "userName": "Esa",
       "userFirtsName": "Mora"
+    },
+    {
+      "id": "a42e",
+      "userId": 4,
+      "userEmail": "erick@gmail.com",
+      "userPassword": "123",
+      "userName": "Erick",
+      "userFirtsName": "Mendoza"
     }
   ],
   "createUser": [
