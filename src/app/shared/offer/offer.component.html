@@ -22,23 +22,22 @@
         </article>
         <div class="divider"></div>
         <main class="carousel">
-            <img class="carousel__icon--left" src="/assets/img/offer/content/arrow-left.svg" alt="">
-            <div>
-                <div class="carousel__content">
-                    <div class="carousel__item">
-                        <app-department-card></app-department-card>
-                    </div>
-                    <div class="carousel__item">
-                        <app-department-card></app-department-card>
-                    </div>
+            <img (click)="nextItem(-1)" class="carousel__icon--left" src="/assets/img/offer/content/arrow-left.svg" alt="">
+            <div class="carousel__content">
+                <div class="carousel__track" [style]="'grid-template-columns: repeat(' + departments.length + ', 250px); transform: translateX(calc(260px * -' + selectedIndex +'))'">
+                    @for (department of departments; track $index) {
+                        <div class="carousel__item">
+                            <app-department-card [department]="department"></app-department-card>
+                        </div>
+                    }
                 </div>
                 <ul class="timer">
-                    <li class="timer__item active"></li>
-                    <li class="timer__item"></li>
-                    <li class="timer__item"></li>
+                    @for (department of departments; track $index) {
+                        <li (click)="selectedIndex = $index" [class]="'timer__item ' + ($index == selectedIndex ? 'active' : '')"></li>
+                    }
                 </ul>
             </div>
-            <img class="carousel__icon--right" src="/assets/img/offer/content/arrow-right.svg" alt="">
+            <img (click)="nextItem(1)" class="carousel__icon--right" src="/assets/img/offer/content/arrow-right.svg" alt="">
         </main>
     </div>
 </section>
