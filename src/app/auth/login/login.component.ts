@@ -5,6 +5,7 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import Swal from 'sweetalert2';
 
 export class USER {
   userId: number;
@@ -113,7 +114,7 @@ export default class LoginComponent implements OnInit {
       this.http
         .post<USER>('http://localhost:3000/userList', userToSave)
         .subscribe((res: USER) => {
-          alert('Usuario Creado');
+    this.registrado()
         }, error => {
           console.error('Error creando usuario:', error);
           alert('Error al crear el usuario. Por favor, inténtelo más tarde.');
@@ -134,17 +135,74 @@ export default class LoginComponent implements OnInit {
         );
 
         if (isUserPresent) {
-          alert('¡Bienvenido de nuevo!');
           localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
           this.router.navigateByUrl('/home');
-        } else {
-          alert('Usuario no encontrado');
+          this.ingreso()
+        } else if (this.userSignUp.userEmail === "fallo") {
+          this.fallo();
+        }else{
+          this.error();
         }
+        
       }, error => {
         console.error('Error fetching users:', error);
         alert('Error al intentar iniciar sesión. Por favor, inténtelo más tarde.');
       });
   }
+
+  forgetPassword(){
+    console.log("Hola")
+    this.router.navigateByUrl('/recover-password')
+  }
+
+ingreso(){
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    title: "Ingreso exitoso",
+    showConfirmButton: false,
+    timer: 1500
+  });
+  
+}
+
+error(){
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Usuario no encontrado!",
+    footer: '<a href="#">¿Has olvidado tu contraseña?</a>'
+  });
+}
+
+fallo(){
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
+  Toast.fire({
+    icon: "warning",
+    title: "Intentelo más tarde"
+  });
+}
+
+registrado(){
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    title: "Registrado exitosamente",
+    showConfirmButton: false,
+    timer: 1500
+  });
+}
+
 
     // this.http.post<USER>("http://localhost:3000/createUser", this.userObj).subscribe((res:USER)=>{
     //   alert("Usuario Creado")

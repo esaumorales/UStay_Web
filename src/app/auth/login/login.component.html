@@ -2,61 +2,59 @@
   integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
 
-<div class="container" id="container">
-  <div class="form-container sign-up-container">
-    <form action="#">
-      <h1>Crear Cuenta</h1>
-      <div class="social-container">
-        <!-- <a href="https://www.facebook.com/moisesdaniel.moralesguillen.3" class="social"><i
-            class="fab fa-facebook-f"></i></a> -->
-        <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=ARpgrqfjATToTDebvPu-woym1AVz_lI-2L0sSUPBv9SxGdolx4Vy0LiXdg4HzS0cYLN5eV-emB2PJg&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S440237861%3A1728328211678235&ddm=1"
-          class="social"><i class="fab fa-google-plus-g"></i></a>
-        <!-- <a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
-          class="social"><i class="fa-brands fa-github"></i></a> -->
-      </div>
-      <span>Use tu email para registrarte</span>
-      <input type="text" placeholder="Nombre" [(ngModel)]="userObj.userName" name="userName" required />
-      <input type="text" placeholder="Apellido" [(ngModel)]="userObj.userFirtsName" name="userFirtsName" required />
-      <input type="email" placeholder="Email" [(ngModel)]="userObj.userEmail" name="userEmail" required />
-      <input type="password" placeholder="Password" [(ngModel)]="userObj.userPassword" name="userPassword" required />
-      <input type="password" placeholder="Password" [(ngModel)]="userObj.userPassword" name="userPassword" required />
-      <button (click)="onSaveUser()">Registrarse</button>
-    </form>
-  </div>
-  <div class="form-container sign-in-container">
-    <form action="#">
-      <h1>Iniciar Sesion</h1>
-      <div class="social-container">
-
-        <a href="https://accounts.google.com/v3/signin/identifier?continue=http%3A%2F%2Fsupport.google.com%2Fanswer%2F2451065%3Fhl%3Den&ec=GAZAdQ&hl=en&ifkv=ARpgrqetXtEjRCENX1gOHLDpLNx-6cnbYKbrTFEMyRKldAwuncVJE7nAdFtbIm2KsrQQd4O85A2mMQ&passive=true&sjid=16239775993809780154-NA&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1496744376%3A1726609424634037&ddm=0"
-          class="social"><i class="fab fa-google-plus-g"></i></a>
-
-      </div>
-      <span>Use su cuenta</span>
-      <input type="email" placeholder="Email" name="Email" [(ngModel)]="userSignUp.userEmail" required/>
-      <input type="password" placeholder="Password" name="Password" [(ngModel)]="userSignUp.userPassword"/>
-      <a href="#">¿Olvido su Contraseña?</a>
-      <button (click)="oneLogin()">Iniciar Sesion</button>
-    </form>
-  </div>
-  <div class="overlay-container">
-    <div class="overlay">
-      <div class="overlay-panel overlay-left">
-        <img src="../../../assets/photos/LOGOS.png" width="150px" height="150px">
-        <h1>¡Bienvenido Devuelta!</h1>
-        <p>“Encuentre el cuarto que usted desee al mejor precio mas comodo”</p>
-        <button class="ghost" id="signIn">Iniciar Sesion</button>
-      </div>
-      <div class="overlay-panel overlay-right">
-        <img src="../../../assets/photos/LOGOS.png" width="150px" height="150px">git
-        <h1>¡Hola, Amigo!</h1>
-        <p>“Encuentre el cuarto que usted desee al mejor precio mas comodo”</p>
-        <button class="ghost" id="signUp" (click)="onSaveUser" >Registrate</button>
+<section class="container-main">
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Crear Cuenta</h1>
+        <div class="social-container">
+          <!-- <a href="https://www.facebook.com/moisesdaniel.moralesguillen.3" class="social"><i
+              class="fab fa-facebook-f"></i></a> -->
+          <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=ARpgrqfjATToTDebvPu-woym1AVz_lI-2L0sSUPBv9SxGdolx4Vy0LiXdg4HzS0cYLN5eV-emB2PJg&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S440237861%3A1728328211678235&ddm=1"
+            class="social"><i class="fab fa-google-plus-g"></i></a>
+          <!-- <a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
+            class="social"><i class="fa-brands fa-github"></i></a> -->
+        </div>
+        <span>Use tu email para registrarte</span>
+        <input type="text" placeholder="Nombre" [(ngModel)]="userObj.userName" name="userName" required />
+        <input type="text" placeholder="Apellido" [(ngModel)]="userObj.userFirtsName" name="userFirtsName" required />
+        <input type="email" placeholder="Email" [(ngModel)]="userObj.userEmail" name="userEmail" required />
+        <input type="password" placeholder="Password" [(ngModel)]="userObj.userPassword" name="userPassword" required />
+        <input type="password" placeholder="Password" [(ngModel)]="userObj.userPassword" name="userPassword" required />
+        <button (click)="onSaveUser()">Registrarse</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Iniciar Sesion</h1>
+        <div class="social-container">
+  
+          <a href="https://accounts.google.com/v3/signin/identifier?continue=http%3A%2F%2Fsupport.google.com%2Fanswer%2F2451065%3Fhl%3Den&ec=GAZAdQ&hl=en&ifkv=ARpgrqetXtEjRCENX1gOHLDpLNx-6cnbYKbrTFEMyRKldAwuncVJE7nAdFtbIm2KsrQQd4O85A2mMQ&passive=true&sjid=16239775993809780154-NA&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1496744376%3A1726609424634037&ddm=0"
+            class="social"><i class="fab fa-google-plus-g"></i></a>
+  
+        </div>
+        <span>Use su cuenta</span>
+        <input type="email" placeholder="Email" name="Email" [(ngModel)]="userSignUp.userEmail" required/>
+        <input type="password" placeholder="Password" name="Password" [(ngModel)]="userSignUp.userPassword"/>
+        <a (click)="forgetPassword()">¿Olvido su Contraseña?</a>
+        <button (click)="oneLogin()">Iniciar Sesion</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <img src="../../../assets/photos/LOGOS.png" width="150px" height="150px">
+          <h1>¡Bienvenido Devuelta!</h1>
+          <p>“Encuentre el cuarto que usted desee al mejor precio mas comodo”</p>
+          <button class="ghost" id="signIn">Iniciar Sesion</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <img src="../../../assets/photos/LOGOS.png" width="150px" height="150px">
+          <h1>¡Hola, Amigo!</h1>
+          <p>“Encuentre el cuarto que usted desee al mejor precio mas comodo”</p>
+          <button class="ghost" id="signUp" (click)="onSaveUser" >Registrate</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<footer>
-
-</footer>
+</section>

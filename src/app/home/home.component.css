@@ -1,0 +1,11 @@
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  /* router-outlet {
+    height: 60px;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: red;
+  } */
