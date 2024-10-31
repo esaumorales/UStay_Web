@@ -17,6 +17,12 @@
         url('/assets/font/Londrina_Solid/LondrinaSolid-Thin.ttf');
 }
 
+@font-face {
+    font-family: 'Kadwa';
+    src: url('assets/font/Kadwa/Kadwa-Regular.ttf'),
+        url('assets/font/Kadwa/Kadwa-Bold.ttf');
+}
+
 * { margin: 0; padding: 0; box-sizing: content-box; }
 
 body {

@@ -25,9 +25,12 @@ export const routes: Routes = [
       {
         path: '', component: MainLayoutComponent
       },
+      {
+        path: '', loadChildren: () => import('./shared/router-outlet').then(m => m.routeShared) 
+      }
     ]
   },
   {
     path: 'recover-password', component: RegisterComponent
-  }
+  },
 ];

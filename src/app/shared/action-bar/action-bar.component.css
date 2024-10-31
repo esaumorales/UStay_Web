@@ -1,0 +1,27 @@
+.content-option{
+    width: 240px;
+    height: 260px;
+    background-color: #F8F8F8;
+    padding: 5px;
+    margin: 25px;
+    box-sizing: content-box;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px 0 #c1c1c1;
+}
+
+.option{
+    font-family: 'Kadwa';
+    color: #575757;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 14px;
+    padding: 4px;
+    padding-left: 12px;
+    border-radius: 8px;
+    box-shadow: 0 0 0 0.1px black;
+}
+
+.arrow-right{
+    padding: 4px;
+    float: inline-end;
+}
