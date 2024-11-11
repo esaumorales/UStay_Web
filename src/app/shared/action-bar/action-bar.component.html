@@ -1,8 +1,23 @@
-<div class="content-option">
-    <div class="option">Datos <img src="../../../assets/img/action-bar/arrow-right.png" alt="" class="arrow-right"></div>
-    <div class="option">Cambiar Contraseña <img src="../../../assets/img/action-bar/arrow-right.png" alt="" class="arrow-right"></div>
-    <div class="option">Cambiar Correo <img src="../../../assets/img/action-bar/arrow-right.png" alt="" class="arrow-right"></div>
-    <div class="option">Solicitar asociado <img src="../../../assets/img/action-bar/arrow-right.png" alt="" class="arrow-right"></div>
-    <div class="option">Información de vivienda <img src="../../../assets/img/action-bar/arrow-right.png" alt="" class="arrow-right"></div>
-    <div class="option">Cuartos <img src="../../../assets/img/action-bar/arrow-right.png" alt="" class="arrow-right"></div>
+<app-header></app-header>
+<div class="contenedor">
+        <div class="content__option">
+                <button class="option">
+                        <div class="option__line"></div>
+                        Datos <img src="../../../assets/img/action-bar/arrow-right.png" alt="" class="arrow-right">
+                </button>
+                <button class="option">Cambiar Contraseña <img src="../../../assets/img/action-bar/arrow-right.png"
+                                alt="" class="arrow-right"></button>
+                <button class="option">Cambiar Correo <img src="../../../assets/img/action-bar/arrow-right.png" alt=""
+                                class="arrow-right"></button>
+                <button class="option">Solicitar asociado <img src="../../../assets/img/action-bar/arrow-right.png"
+                                alt="" class="arrow-right"></button>
+                <button class="option">Información de vivienda <img src="../../../assets/img/action-bar/arrow-right.png"
+                                alt="" class="arrow-right"></button>
+                <button class="option">Cuartos <img src="../../../assets/img/action-bar/arrow-right.png" alt=""
+                                class="arrow-right"></button>
+        </div>
+        <div class="router-outlet">
+                <router-outlet></router-outlet>
+        </div>
 </div>
+<app-footer></app-footer>

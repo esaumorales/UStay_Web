@@ -1,3 +1,7 @@
+section{
+    background: linear-gradient(238.07deg, #EC651D -1.97%, #FFCB3C 28.11%, #FFCB3C 46.09%,  #EE6F20 93.37%);
+}
+
 .offer {
     display: grid;
     grid-template-rows: auto 1fr;
@@ -5,7 +9,7 @@
 
 .offer__header {
     position: relative;
-    background-color: #FFBB00CC;
+    /* background-color: #FFBB00CC; */
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     overflow: hidden;
@@ -69,7 +73,7 @@
 
 .offer__content {
     position: relative;
-    background: linear-gradient(238.07deg, #FFCB3C -1.97%, #EC651D 28.11%, #EE6F20 46.09%, #FFCB3C 93.37%);
+    
     display: grid;
     grid-template-columns: auto auto 1fr;
     padding: 20px 10px;
@@ -130,7 +134,7 @@
 }
 
 .motivator__phrase {
-    background: #81007F;
+    background-color: #81007F;
     padding: 10px 0px;
     width: 100%;
     color: #FFFFFF;

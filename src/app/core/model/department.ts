@@ -3,7 +3,7 @@ import { User } from "./User";
 export interface Department {
     urlImg: string;
     description: string;
-    start: number;
+    start: number;  
     price: number;
     status?: string;
     owner: User;

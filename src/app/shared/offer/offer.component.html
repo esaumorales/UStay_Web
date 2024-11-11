@@ -24,15 +24,15 @@
         <main class="carousel">
             <img (click)="nextItem(-1)" class="carousel__icon--left" src="/assets/img/offer/content/arrow-left.svg" alt="">
             <div class="carousel__content">
-                <div class="carousel__track" [style]="'grid-template-columns: repeat(' + departments.length + ', 250px); transform: translateX(calc(260px * -' + selectedIndex +'))'">
-                    @for (department of departments; track $index) {
+                <div class="carousel__track" [style]="'grid-template-columns: repeat(' + inmuebles.length + ', 280px); transform: translateX(calc(250px * -' + selectedIndex +'))'">
+                    @for (inmueble of inmuebles; track $index) {
                         <div class="carousel__item">
-                            <app-department-card [department]="department"></app-department-card>
+                            <app-department-card [inmueble]="inmueble"></app-department-card>
                         </div>
                     }
                 </div>
                 <ul class="timer">
-                    @for (department of departments; track $index) {
+                    @for (inmueble of inmuebles; track $index) {
                         <li (click)="selectedIndex = $index" [class]="'timer__item ' + ($index == selectedIndex ? 'active' : '')"></li>
                     }
                 </ul>

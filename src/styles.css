@@ -23,7 +23,19 @@
         url('assets/font/Kadwa/Kadwa-Bold.ttf');
 }
 
-* { margin: 0; padding: 0; box-sizing: content-box; }
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/font/Inter/Inter_28pt-Thin.ttf'),
+        url('assets/font/Inter/Inter_28pt-ExtraLight.ttf'),
+        url('assets/font/Inter/Inter_28pt-Light.ttf'),
+        url('assets/font/Inter/Inter_28pt-Regular.ttf'),
+        url('assets/font/Inter/Inter_28pt-Medium.ttf'),
+        url('assets/font/Inter/Inter_28pt-SemiBold.ttf'),
+        url('assets/font/Inter/Inter_28pt-Bold.ttf'),
+        url('assets/font/Inter/Inter_28pt-ExtraBold.ttf'),
+        url('assets/font/Inter/Inter_28pt-Black.ttf');
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     min-height: 100vh;

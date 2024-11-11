@@ -1,0 +1,163 @@
+.direction {
+    width: 99%;
+    height: 40px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 8px;
+    border-radius: 12px;
+    box-shadow: 0 0 0 .5px #ccc;
+    box-sizing: border-box;
+}
+
+.content__information {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 20px;
+}
+
+.content__img {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.content__user {
+    position: relative;
+    left: 20px;
+    background-color: #fff;
+    width: 640px;
+    height: 360px;
+    box-shadow: 0 0 16px 0 #77d604;
+    border-radius: 12px;
+}
+
+.img__main {
+    position: relative;
+    z-index: -10;
+    right: 20px;
+    background-image: url("../../../assets/img/example-deparment/example-deparment-1.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:60%;
+    height: 460px;
+    border-radius: 12px;
+}
+
+.see-room{
+    background-color: #ededed;
+    height: 70px;
+    border-radius: 12px;
+}
+
+
+.content__details{
+    min-height: 100vh;
+     background-color: red;
+     /* padding: 5px; */
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+h2 {
+    margin: 28px 8px 16px 8px;
+    font-size: 18px;
+    font-family: 'Inter';
+    font-weight: 600
+}
+
+.divisor {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+
+table {
+    margin: 8px;
+    margin-top: 16px;
+    font-size: 16px;
+    width: 100%;
+}
+
+td {
+    padding: 16px;
+}
+
+td:nth-child(1) {
+    height: 20px;
+    width: 160px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+table tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.elements__appreciate {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.starts {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #f4f4f4;
+    width: 140px;
+    height: 100px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.start__calification {
+    font-family: 'Inter';
+    color: #fff;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+
+.user {
+    display: flex;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.user__img {
+    border-radius: 100%;
+    height: 52px;
+    width: 52px;
+}
+
+.user__name {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    margin-left: 16px;
+}
+
+.icon {
+    display: flex;
+}
+
+.rooms-similar {
+    background-color: blue;
+    padding: 5px;
+}
+
+
+
+.servicios{
+    width: 100%;
+}

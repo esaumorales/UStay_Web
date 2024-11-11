@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { MainLayoutComponent } from './shared/main-layout/main-layout.component';
 import {RegisterComponent} from './auth/register/register.component';
+import { RoomComponent } from './shared/room/room.component';
 export const routes: Routes = [
   {
     path: 'auth',
@@ -26,9 +27,12 @@ export const routes: Routes = [
         path: '', component: MainLayoutComponent
       },
       {
-        path: '', loadChildren: () => import('./shared/router-outlet').then(m => m.routeShared) 
-      }
+        path: 'room', component: RoomComponent
+      },
     ]
+  },
+  {
+    path: 'action-bar', loadChildren: () => import('./shared/router-outlet').then(m => m.routeShared) 
   },
   {
     path: 'recover-password', component: RegisterComponent

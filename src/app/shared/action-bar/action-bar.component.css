@@ -1,4 +1,17 @@
-.content-option{
+.router-outlet{
+    margin-top: 25px;
+    background-color: red;
+    width: 100%;
+}
+.contenedor {
+    background-color: #ccc;
+    min-height: 100vh;
+    display: flex;
+}
+
+.content__option {
+    display: flex;
+    flex-wrap: wrap;
     width: 240px;
     height: 260px;
     background-color: #F8F8F8;
@@ -9,19 +22,44 @@
     box-shadow: 0 2px 8px 0 #c1c1c1;
 }
 
-.option{
+.option {
     font-family: 'Kadwa';
+    display: flex;
+    position: relative;
     color: #575757;
     font-weight: 400;
     font-size: 12px;
-    margin: 14px;
+    margin: 8px 0;
     padding: 4px;
     padding-left: 12px;
     border-radius: 8px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
     box-shadow: 0 0 0 0.1px black;
 }
 
-.arrow-right{
+.arrow-right {
     padding: 4px;
-    float: inline-end;
+    position: absolute;
+    right: 5px;
+}
+
+.option:hover {
+    font-weight: 800;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 0 0 0;
+}
+
+.option__line {
+    background-color: transparent;
+    width: 3px;
+    height: 90%;
+}
+
+
+.option:hover .option__line {
+    background-color: orange;
+    margin-right: 4px;
 }
