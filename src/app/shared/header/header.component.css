@@ -3,7 +3,6 @@ header {
   width: 100%;
   background: var(--AZUL-DEGRADADO, linear-gradient(181deg, rgba(0, 240, 255, 0.20) -60.23%, rgba(0, 6, 20, 0.20) 47.03%), linear-gradient(180deg, rgba(0, 5, 19, 0.20) 54.48%, rgba(161, 153, 210, 0.20) 182.45%), #000615);
   position: fixed;
-  top: 0;
   z-index: 1000;
 }
 
@@ -23,7 +22,6 @@ nav {
 .logo {
   display    : flex;
   gap        : 1px;
-  align-items: end;
 }
 
 .logo span {
@@ -40,28 +38,14 @@ nav {
   font-weight: bold;
 }
 
-
-.contaner {
-  display        : flex;
-  justify-content: space-between;
-  align-items    : center;
-  padding        : 10px 20px;
-}
-
 .options ul {
   list-style: none;
   display   : flex;
   margin    : 0;
   padding   : 0;
-  display   : flex;
   gap       : 16px;
 }
 
-options li {
-  margin-left: 20px;
-  cursor     : pointer;
-
-}
 
 .bi {
   color: white;

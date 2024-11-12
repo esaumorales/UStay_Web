@@ -1,27 +1,142 @@
 <div class="direction">
     > Direction
 </div>
-
-<!--  -->
-
 <section class="content__information">
     <div class="content__img">
         <article class="content__user">
+        <div class="user--information">
+            <img src="../../../assets/img/example-deparment/example-deparment-1.webp" alt="" class="user--img">Olimpio Suarez Martinez
+        </div>
+        <div class="information--room">
+            <div class="room--price">
+                <p>S/ {{inmueble.precio}}</p>
+                <div class="period">Por mes</div>
+                <div style="display: flex;">
+                    <i class="fa-solid fa-location-dot fs-5" style="color: #ff0000;"></i>
+                    <p class="address">
+                        {{inmueble.edificio.direccion}}
+                    </p>
+                </div>
+            </div>
+            <div class="room--disponibility">
+                <div class="disponibility">DISPONIBLE</div>
+            </div>
+        </div>
+        <div>
+            <p class="descripcion">
+                <i class="fa-solid fa-database"></i>
+                Descripción:
+            </p>
+            <div class="divisor"></div>
+            <p class="information--descripcion">
+                {{inmueble.descripcion}}
+            </p>
+        </div>
         </article>
         <div class="img__main"></div>
     </div>
     <div class="see-room">
-        
+        <i class="fa-solid fa-house fs-5"></i>
+        <a class="see-house">Ver casa</a>
     </div>
-    <div class="content__details">
-
+    <div class="content" style="display: flex; gap: 20px;">
+        <div class="class1">
+            <div class="content__details">
+                <div class="details--header">
+                    <i class="fa-solid fa-location-crosshairs fs-5" style="  transform: rotate(45deg);"></i>
+                    Especificaciones
+                </div>
+                <div class="details--infomation">
+                
+                </div>
+            </div>
+            <div class="content__details">
+                <div class="details--header">
+                    <i class="fa-solid fa-book fs-5"></i>
+                    Reglas de casa
+                </div>
+                <div class="details--infomation">
+                    {{inmueble.edificio.regla_casa}}
+                </div>
+            </div>
+            <div class="content__details">
+                <div class="details--header">
+                    <i class="fa-regular fa-map fs-5"></i>
+                    Dirección
+                </div>
+                <div class="details--infomation information--modified" style="display: flex; flex-direction: column; gap: px;">
+                    <span>
+                        <i class="fa-solid fa-location-dot" style="margin: 0 4px;"></i>
+                        {{inmueble.edificio.direccion}}
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-location-dot" style="margin: 0 4px;"></i>URL: 
+                        <a target="_blank" href="{{inmueble.edificio.url_map}}">
+                            {{inmueble.edificio.url_map}}
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="content__details">
+                <div class="details--header">
+                    <i class="fa-regular fa-circle-user fs-5"></i>
+                    Contacto
+                </div>
+                <div class="details--infomation information--modified">
+                </div>
+                {{inmueble.edificio.partner.correo_empresa}}
+            </div>
+        </div>
+        <div class="class2">
+            <div class="content__details">
+                <div class="details--header">
+                    <i class="fa-solid fa-bars fs-5"></i>
+                    Servicios
+                </div>
+                <table>
+                    <tr>
+                        <td>Servicio 1</td>
+                        <td>Detalle 1</td>
+                    </tr>
+                    <tr>
+                        <td>Servicio 2</td>
+                        <td>Detalle 2</td>
+                    </tr>
+                    <tr>
+                        <td>Servicio 3</td>
+                        <td>Detalle 3</td>
+                    </tr>
+                    <tr>
+                        <td>Servicio 4</td>
+                        <td>Detalle 4</td>
+                    </tr>
+                    <tr>
+                        <td>Servicio 5</td>
+                        <td>Detalle 5</td>
+                    </tr>
+                    <tr>
+                        <td>Servicio 6</td>
+                        <td>Detalle 6</td>
+                    </tr>
+                    <tr>
+                        <td>Servicio 7</td>
+                        <td>Detalle 7</td>
+                    </tr>
+                    <tr>
+                        <td>Servicio 8</td>
+                        <td>Detalle 8</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
-    <img src="../../../assets/img/Frame 2334.png" alt="" class="servicios">
+    <!-- <img src="../../../assets/img/Frame 2334.png" alt="" class="servicios"> -->
 
 </section>
 <!-- <div class="see-room">Ver casa</div> -->
 <header>
     <div class="header__room">
+    
     </div>
     <div class="rooms-similar">
     </div>

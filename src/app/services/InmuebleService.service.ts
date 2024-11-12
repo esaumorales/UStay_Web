@@ -14,5 +14,9 @@ export class InmuebleService {
         return this._http.get(this.apiInmueble+"/listar")
     }
 
+    getInmueble(id:number): Observable<any>{
+        return this._http.get(this.apiInmueble+"/listar/"+id)
+    }
 
+    
 }

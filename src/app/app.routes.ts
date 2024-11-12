@@ -27,8 +27,8 @@ export const routes: Routes = [
         path: '', component: MainLayoutComponent
       },
       {
-        path: 'room', component: RoomComponent
-      },
+        path: 'room/:id', component: RoomComponent
+      }
     ]
   },
   {

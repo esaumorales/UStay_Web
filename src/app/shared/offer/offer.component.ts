@@ -13,7 +13,7 @@ import { Inmueble } from '../../core/model/Inmueble';
 })
 export class OfferComponent implements OnInit {
 
-  inmuebles: Inmueble[] = []; // Variable para almacenar los datos
+  inmuebles: Inmueble[] = [];
 
   constructor(private inmuebleService: InmuebleService) { }
 
@@ -30,7 +30,6 @@ export class OfferComponent implements OnInit {
       error: (error) => console.error('Error al obtener inmuebles:', error)
     });
   }
-
 
   owners: User[] = [
     { name: 'Moises Morales', urlProfile: '/assets/img/example-deparment/example-deparment-1.webp' },

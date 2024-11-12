@@ -22,13 +22,23 @@ p {
   font-weight: 300;
 }
 
-.room__search {
-  width: 40%;
+.partner__search {
+  width: 60%;
   height: 46px;
   padding: 8px;
   border: none;
+  outline: none;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 20px;
+  background-color: #dbdcd4;
+}
+
+.icon__search{
+  position: relative;
+  right: 40px;
+  height: 30px;
+  width: 30px;
+  top:-5px;
 }
 
 .button__search {

@@ -1,4 +1,4 @@
-<article class="card">
+<article class="card" (click)="goToDetalle(inmueble.id)">
     <div class="card__image" [style]="'background-image: url(' + inmueble.edificio.img_edificio + ');'">
         @if (sequence != undefined) {
             <div class="card__image--order">

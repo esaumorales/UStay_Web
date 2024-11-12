@@ -1,4 +1,13 @@
 @font-face {
+    font-family: 'Abhaya Libre';
+    src: url('assets/font/AbhayaLibre/AbhayaLibre-Regular.ttf'),
+    url('assets/font/AbhayaLibre/AbhayaLibre-Medium.ttf'),
+    url('assets/font/AbhayaLibre/AbhayaLibre-SemiBold.ttf'),
+    url('assets/font/AbhayaLibre/AbhayaLibre-Bold.ttf'),
+    url('assets/font/AbhayaLibre/AbhayaLibre-ExtraBold.ttf');
+}
+
+@font-face {
     font-family: 'Just Another Hand';
     src: url('/assets/font/Just_Another_Hand/JustAnotherHand-Regular.ttf');
 }
@@ -35,6 +44,7 @@
         url('assets/font/Inter/Inter_28pt-ExtraBold.ttf'),
         url('assets/font/Inter/Inter_28pt-Black.ttf');
 }
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {

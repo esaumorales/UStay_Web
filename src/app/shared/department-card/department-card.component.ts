@@ -1,7 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { Department } from '../../core/index.model';
 import { CommonModule } from '@angular/common';
 import { Inmueble } from '../../core/model/Inmueble';
+import { Router } from '@angular/router';
+import { InmuebleService } from '../../services/InmuebleService.service';
+
 
 @Component({
   selector: 'app-department-card',
@@ -14,4 +16,10 @@ export class DepartmentCardComponent {
   @Input({ required: true }) inmueble!: Inmueble;
   @Input() sequence!: number;
   @Input() hasButtonActions: boolean = false;
+
+  constructor(private router: Router, private inmuebleService: InmuebleService) {}
+
+  goToDetalle(id: number) {
+    this.router.navigate(['/home/room', id]);
+  }
 }
