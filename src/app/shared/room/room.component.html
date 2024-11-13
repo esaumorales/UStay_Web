@@ -4,34 +4,38 @@
 <section class="content__information">
     <div class="content__img">
         <article class="content__user">
-        <div class="user--information">
-            <img src="../../../assets/img/example-deparment/example-deparment-1.webp" alt="" class="user--img">Olimpio Suarez Martinez
-        </div>
-        <div class="information--room">
-            <div class="room--price">
-                <p>S/ {{inmueble.precio}}</p>
-                <div class="period">Por mes</div>
-                <div style="display: flex;">
-                    <i class="fa-solid fa-location-dot fs-5" style="color: #ff0000;"></i>
-                    <p class="address">
-                        {{inmueble.edificio.direccion}}
-                    </p>
+            <div class="user--information">
+                <img src="../../../assets/img/example-deparment/example-deparment-1.webp" alt=""
+                    class="user--img">Olimpio Suarez Martinez
+            </div>
+            <div class="information--room">
+                <div class="room--price">
+                    <p>S/ {{inmueble.precio}}</p>
+                    <div class="period">Por mes</div>
+                    <div style="display: flex;">
+                        <i class="fa-solid fa-location-dot fs-5" style="color: #ff0000;"></i>
+                        <p class="address">
+                            {{inmueble.edificio.direccion}}
+                        </p>
+                    </div>
+                </div>
+                <div class="room--disponibility">
+                    <div class="disponibility"
+                        [style]="{'background-color': inmueble.disponibilidad ? '#77d604' : 'red'}">
+                        {{ inmueble.disponibilidad ? 'Disponible' : 'No disponible' }}
+                    </div>
                 </div>
             </div>
-            <div class="room--disponibility">
-                <div class="disponibility">DISPONIBLE</div>
+            <div>
+                <p class="descripcion">
+                    <i class="fa-solid fa-database"></i>
+                    Descripción:
+                </p>
+                <div class="divisor"></div>
+                <p class="information--descripcion">
+                    {{inmueble.descripcion}}
+                </p>
             </div>
-        </div>
-        <div>
-            <p class="descripcion">
-                <i class="fa-solid fa-database"></i>
-                Descripción:
-            </p>
-            <div class="divisor"></div>
-            <p class="information--descripcion">
-                {{inmueble.descripcion}}
-            </p>
-        </div>
         </article>
         <div class="img__main"></div>
     </div>
@@ -47,7 +51,7 @@
                     Especificaciones
                 </div>
                 <div class="details--infomation">
-                
+
                 </div>
             </div>
             <div class="content__details">
@@ -64,13 +68,14 @@
                     <i class="fa-regular fa-map fs-5"></i>
                     Dirección
                 </div>
-                <div class="details--infomation information--modified" style="display: flex; flex-direction: column; gap: px;">
+                <div class="details--infomation information--modified"
+                    style="display: flex; flex-direction: column; gap: px;">
                     <span>
-                        <i class="fa-solid fa-location-dot" style="margin: 0 4px;"></i>
+                        <i class="fa-solid fa-location-dot"></i>
                         {{inmueble.edificio.direccion}}
                     </span>
                     <span>
-                        <i class="fa-solid fa-location-dot" style="margin: 0 4px;"></i>URL: 
+                        <i class="fa-solid fa-location-dot"></i>URL:
                         <a target="_blank" href="{{inmueble.edificio.url_map}}">
                             {{inmueble.edificio.url_map}}
                         </a>
@@ -83,8 +88,19 @@
                     Contacto
                 </div>
                 <div class="details--infomation information--modified">
+                    <span style="display: flex; justify-content: space-between; align-items: center; margin: 4px 0;">
+                        <p style="margin: 0;">
+                            <i class="fa-solid fa-phone"></i>{{inmueble.edificio.partner.telefono_empresa}}
+                        </p>
+                        <img src="../../../assets/img/icons/Whatsapp.svg" alt="" style="height: 36px;">
+                    </span>
+                    <span style="display: flex; justify-content: space-between; align-items: center; margin: 4px 0;">
+                        <p style="margin: 0;">
+                            <i class="fa-regular fa-envelope"></i>{{inmueble.edificio.partner.correo_empresa}}
+                        </p>
+                        <img src="../../../assets/img/icons/Correo.svg" alt="" style="height: 36px;">
+                    </span>
                 </div>
-                {{inmueble.edificio.partner.correo_empresa}}
             </div>
         </div>
         <div class="class2">
@@ -95,49 +111,59 @@
                 </div>
                 <table>
                     <tr>
-                        <td>Servicio 1</td>
-                        <td>Detalle 1</td>
+                      <td>Luz:</td>
+                      <td>{{servicio.luz || 'No especificado'}}</td>
                     </tr>
                     <tr>
-                        <td>Servicio 2</td>
-                        <td>Detalle 2</td>
+                      <td>Agua:</td>
+                      <td>{{servicio.agua || 'No especificado'}}</td>
                     </tr>
                     <tr>
-                        <td>Servicio 3</td>
-                        <td>Detalle 3</td>
+                      <td>Lavandería:</td>
+                      <td>{{servicio.lavanderia || 'No especificado'}}</td>
                     </tr>
                     <tr>
-                        <td>Servicio 4</td>
-                        <td>Detalle 4</td>
+                        <td>Wifi:</td>
+                        <td>{{servicio.wifi || 'No especificado'}} </td>
                     </tr>
                     <tr>
-                        <td>Servicio 5</td>
-                        <td>Detalle 5</td>
+                        <td>Cable:</td>
+                        <td>{{servicio.cable || 'No especificado'}} </td>
                     </tr>
                     <tr>
-                        <td>Servicio 6</td>
-                        <td>Detalle 6</td>
+                        <td>Garaje:</td>
+                        <td>{{servicio.garaje || 'No especificado'}} </td>
                     </tr>
                     <tr>
-                        <td>Servicio 7</td>
-                        <td>Detalle 7</td>
+                        <td>Almacén:</td>
+                        <td>{{servicio.almacen || 'No especificado'}} </td>
                     </tr>
                     <tr>
-                        <td>Servicio 8</td>
-                        <td>Detalle 8</td>
+                        <td>Seguridad:</td>
+                        <td>{{servicio.seguridad || 'No especificado'}} </td>
                     </tr>
-                </table>
+                    <tr>
+                        <td>Calefacción:</td>
+                        <td>{{servicio.calefaccion || 'No especificado'}} </td>
+                    </tr>
+                    <tr>
+                        <td>Limpieza:</td>
+                        <td>{{servicio.limpieza || 'No especificado'}} </td>
+                    </tr>
+                    <tr>
+                        <td>Pensión:</td>
+                        <td>{{servicio.pension || 'No especificado'}} </td>
+                    </tr>
+                  </table>
+                  
             </div>
         </div>
     </div>
-    <!-- <img src="../../../assets/img/Frame 2334.png" alt="" class="servicios"> -->
-
+    <footer>
+        <div class="footer__room">
+            <i class="fa-solid fa-bag-shopping"></i> <a class="see-house">Cuartos similares:</a>
+        </div>
+        <div class="rooms-similar">
+        </div>
+    </footer>
 </section>
-<!-- <div class="see-room">Ver casa</div> -->
-<header>
-    <div class="header__room">
-    
-    </div>
-    <div class="rooms-similar">
-    </div>
-</header>

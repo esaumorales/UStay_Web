@@ -106,7 +106,7 @@ p{
 }
 
 .disponibility{
-    background-color: #77d604;
+    /* background-color: #77d604; */
     height: 40px;
     width: 140px;
     display: flex;
@@ -218,6 +218,11 @@ table {
     width: 100%;
 }
 
+tr td:nth-child(2):empty {
+    display: none;
+}
+  
+
 td {
     padding: 16px;
 }
@@ -284,6 +289,14 @@ table tr:nth-child(even) {
     display: flex;
 }
 
+.footer__room{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 60px;
+}
+
 .rooms-similar {
     background-color: blue;
     padding: 5px;
@@ -291,4 +304,8 @@ table tr:nth-child(even) {
 
 .servicios {
     width: 100%;
+}
+
+i{
+    margin: 0 4px;
 }
