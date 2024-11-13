@@ -3,6 +3,9 @@ import { ActionBarComponent } from "./action-bar/action-bar.component";
 import { RoomComponent } from "./room/room.component";
 import { ViviendaComponent } from "./vivienda/vivienda.component";
 import { InmuebleComponent } from "./inmueble/inmueble.component";
+import { PartnerComponent } from "./partner/partner.component";
+import { DatosPersonalesComponent } from "./datos-personales/datos-personales.component";
+import { PasswordComponent } from "./password/password.component";
 
 export const routeShared: Routes = [
     {
@@ -13,6 +16,15 @@ export const routeShared: Routes = [
             },
             {
                 path: 'vivienda', component: ViviendaComponent 
+            },
+            {
+                path: 'solicitud', component: PartnerComponent
+            },
+            {
+                path: 'datos', component: DatosPersonalesComponent
+            },
+            {
+                path: 'password', component: PasswordComponent  
             },
         ]
     }

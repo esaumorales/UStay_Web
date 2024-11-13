@@ -217,19 +217,22 @@ table {
     font-size: 16px;
     width: 100%;
 }
-
-tr td:nth-child(2):empty {
-    display: none;
-}
   
 
 td {
+    font-family: 'Inter';
     padding: 16px;
+    font-weight: 900;
 }
 
 td:nth-child(1) {
     height: 20px;
     width: 160px;
+}
+
+td:nth-child(2) {
+    opacity: .6;
+    color: #000;
 }
 
 table tr:nth-child(odd) {
@@ -304,6 +307,13 @@ table tr:nth-child(even) {
 
 .servicios {
     width: 100%;
+}
+
+.carousel__item{
+    background-color: red;
+    margin: 20px;
+    max-width: 200px;
+    height: 280px;
 }
 
 i{

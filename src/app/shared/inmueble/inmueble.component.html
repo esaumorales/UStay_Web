@@ -1,27 +1,53 @@
-<section class="content">
-    <span class="title">
-        Información de la vivienda
-    </span>
-    <div class="foto">
+<div class="container-cuartos">
+    <div class="cuartos-infad">
+        <h1>Cuartos</h1>
+        <button class="disponible-btn">Disponible</button>
     </div>
-    <h2 class="atributes">Foto</h2>
-    <h2 class="atributes">Dirección:</h2>
-    <input type="text" class="input" placeholder="Ingrese la dirección">
-    <div style="display: flex; gap: 4px; width: 100%;">
-        <div style="display: flex; flex-direction: column; width: 50%;">
-            <h2 class="atributes">N° Pisos:</h2>
-            <input type="number" class="input1" placeholder="N° Pisos">
+    <div class="cuartos-disponible">
+        <span class="cuartos-span">Información adicional:</span>
+        <button class="cuartos-add">Subir foto</button>
+    </div>
+    <div class="cuartos-image">
+        <!-- Aquí se mostrará la lógica de las imágenes cargadas -->
+    </div>
+    <div class="bettwen">
+        <div class="cuartos-crt">
+            <span class="cuartos-span">Nº Cuarto:</span>
+            <select name="numero_cuartos" id="numero_cuartos">
+                <option>Seleccionar</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
         </div>
-        <div style="display: flex; flex-direction: column; width: 100%">
-            <h2 class="atributes">Zona:</h2>
-            <select name="" id="1" class="input2"></select>
+        <div class="cuartos-prd">
+            <span class="cuartos-span">Periodo</span>
+            <select name="periodo" id="periodo">
+                <option>Seleccionar</option>
+                <option value="mensual">Mensual</option>
+                <option value="anual">Anual</option>
+            </select>
+        </div>
+        <div class="cuartos-prc">
+            <span class="cuartos-span">Precio</span>
+            <select name="precio" id="precio">
+                <option>Escriba Aqui</option>
+            </select>
         </div>
     </div>
-    <h2 class="atributes">Referencia de edificio:</h2>
-    <input type="text" class="input" placeholder="Ingrese ref.">
-    <h2 class="atributes">Reglas de la casa:</h2>
-    <input type="text" class="rule__casa" placeholder="Reglas de casa">
-    <h2 class="atributes">Link Google Maps:</h2>
-    <input type="text" class="input" placeholder="Ingrese Link">
-    <button>Guardar cambios</button>
-</section>
+    <div class="cuartos-servicios">
+        <span class="cuartos-span">Servicios:</span>
+        <button class="cuartos-add">Agregar</button>
+        <!-- Aqui se mostrara la logica de Servicios -->
+    </div>
+    <div class="cuartos-inf">
+        <label for="inf">Información adicional</label>
+        <textarea rows="8" placeholder="Escriba aquí"></textarea>
+        <div class="cuartos-btn">
+            <button type="button" class="btn btn-bold">B</button>
+            <button type="button" class="btn btn-italic">I</button>
+            <button type="button" class="btn btn-underline">U</button>
+        </div>
+    </div>
+    <button type="submit" class="save-btn">Guardar cambios</button>
+</div>

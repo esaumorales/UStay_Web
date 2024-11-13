@@ -1,18 +1,21 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { InmuebleService } from '../../services/InmuebleService.service';
 import { Servicios } from '../../core/model/Servicios';
 import { ServiciosService } from '../../services/ServiciosService';
+import { Inmueble } from '../../core/model/Inmueble';
+import { DepartmentCardComponent } from '../department-card/department-card.component';
 
 @Component({
   selector: 'app-room',
   standalone: true,
-  imports: [],
+  imports: [DepartmentCardComponent],
   templateUrl: './room.component.html',
   styleUrl: './room.component.css'
 })
-export class RoomComponent {
+export class RoomComponent implements OnInit{
 
+  inmuebles: Inmueble[] = [];
   inmueble: any;
   servicio: any;
   servicios: Servicios[]=[];
@@ -27,6 +30,17 @@ export class RoomComponent {
   ngOnInit(): void {
     this.listar_cuarto();
     this.listar_servicios();
+    this.cargarInmuebles();
+  }
+
+  cargarInmuebles(): void {
+    this.inmuebleService.getAllInmuebles().subscribe({
+      next: (data) => {
+        this.inmuebles = data;
+        console.log('Datos de inmuebles:', this.inmuebles);
+      },
+      error: (error) => console.error('Error al obtener inmuebles:', error)
+    });
   }
 
   listar_cuarto() {

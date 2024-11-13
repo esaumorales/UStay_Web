@@ -1,0 +1,101 @@
+.container-solicitud {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.container-solicitud-text, .container-solicitud-second-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.container-solicitud-text h2, .container-solicitud-second-container h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.container-solicitud-text p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.container-solicitud-text-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container-solicitud-text-form input[type="text"], 
+.container-solicitud-text-form input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+
+}
+
+.container-solicitud-text-input-group {
+    display: flex;
+    gap: 16px;
+}
+
+.container-solicitud-text-input-group input {
+    flex: 1;
+}
+
+.container-solicitud-text-form button {
+    padding: 10px;
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container-solicitud-text-form button:hover {
+    background-color: #e65c00;
+}
+
+.container-solicitud-text-note {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 15px;
+}
+
+.container-solicitud-second-container-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.container-solicitud-second-container-list li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.container-solicitud-second-container-detective {
+    width: 100px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container-solicitud {
+        flex-direction: column;
+    }
+
+    .container-solicitud-second-container-detective {
+        width: 80px;
+        margin-top: 10px;
+    }
+}

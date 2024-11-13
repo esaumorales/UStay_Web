@@ -88,17 +88,23 @@
                     Contacto
                 </div>
                 <div class="details--infomation information--modified">
-                    <span style="display: flex; justify-content: space-between; align-items: center; margin: 4px 0;">
+                    <span style="display: flex; justify-content: space-between; align-items: center; margin: 6px 0;">
                         <p style="margin: 0;">
-                            <i class="fa-solid fa-phone"></i>{{inmueble.edificio.partner.telefono_empresa}}
+                            <i class="fa-solid fa-phone"></i>
+                            +<a href="https://wa.me/{{inmueble.edificio.partner.telefono_empresa}}" target="_blank" style="text-decoration: none; color: #000;">
+                                {{inmueble.edificio.partner.telefono_empresa}}
+                            </a>
                         </p>
-                        <img src="../../../assets/img/icons/Whatsapp.svg" alt="" style="height: 36px;">
+                        <img src="../../../assets/img/icons/Whatsapp.svg" alt="" style="height: 32px;">
                     </span>
-                    <span style="display: flex; justify-content: space-between; align-items: center; margin: 4px 0;">
+                    <span style="display: flex; justify-content: space-between; align-items: center; margin: 6px 0;">
                         <p style="margin: 0;">
-                            <i class="fa-regular fa-envelope"></i>{{inmueble.edificio.partner.correo_empresa}}
+                            <i class="fa-regular fa-envelope"></i> 
+                            <a href="mailto:{{inmueble.edificio.partner.correo_empresa}}" style="text-decoration: none; color: #000;">
+                                {{inmueble.edificio.partner.correo_empresa}}
+                            </a>
                         </p>
-                        <img src="../../../assets/img/icons/Correo.svg" alt="" style="height: 36px;">
+                        <img src="../../../assets/img/icons/Correo.svg" alt="" style="height: 32px;">
                     </span>
                 </div>
             </div>
@@ -164,6 +170,11 @@
             <i class="fa-solid fa-bag-shopping"></i> <a class="see-house">Cuartos similares:</a>
         </div>
         <div class="rooms-similar">
+            @for (inmueble of inmuebles; track $index) {
+                <div>
+                    <app-department-card [inmueble]="inmueble" class="carousel__item"></app-department-card>
+                </div>
+            }
         </div>
     </footer>
 </section>

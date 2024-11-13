@@ -1,0 +1,111 @@
+.container-datos {
+    max-width: 380px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-header-datos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.icono {
+    font-size: 20px;
+    color: #333;
+}
+
+.text-header-datos h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.text-datos {
+    font-size: 18px;
+font-family: Arial, Helvetica, sans-serif;    margin-top: 20px;
+    color: #333;
+}
+
+.descripcion {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.input-datos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.input-datos label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.ipt {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+    color: #333;
+}
+
+.input-datos-correo {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.number {
+    width: 60px;
+    border-radius: 8px;
+}
+
+.telefono {
+    flex-grow: 1;
+    border-radius: 8px;
+}
+
+.datos-button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.datos-button:hover {
+    background-color: #e65c00;
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+    .text-header-datos {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .input-datos-correo {
+        flex-direction: column;
+    }
+    
+    .number, .telefono {
+        width: 100%;
+    }
+}
