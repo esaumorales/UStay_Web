@@ -2,10 +2,11 @@ import { Routes } from '@angular/router';
 import { MainLayoutComponent } from './shared/main-layout/main-layout.component';
 import {RegisterComponent} from './auth/register/register.component';
 import { RoomComponent } from './shared/room/room.component';
+import { LoginComponent } from './auth/login/login.component';
 export const routes: Routes = [
   {
     path: 'auth',
-    loadComponent: () => import('./auth/login/login.component'),
+    loadComponent: () => import('./auth/login/login.component').then(m => m.LoginComponent as typeof LoginComponent),
     children: [                                                         //Rutas Hijas
       {
         path: '',

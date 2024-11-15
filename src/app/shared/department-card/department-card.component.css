@@ -11,7 +11,8 @@
     position: relative;
     height: 250px;
     width: 100%;
-    /* background-image: url(' + department.urlImg + '); */
+    /* background-color: red; */
+    background-image: url("../../../assets/img/example-deparment/example-deparment-1.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,7 +53,7 @@
 }
 
 .icon__love.i-love path {
-    fill: black;
+    fill: red;
 }
 
 .card__body {
@@ -88,7 +89,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    border-radius: 999px;
+    border-radius: 50%;
     -webkit-border-radius: 999px;
     -moz-border-radius: 999px;
     -ms-border-radius: 999px;

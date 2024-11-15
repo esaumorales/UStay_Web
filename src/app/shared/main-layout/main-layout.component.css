@@ -77,7 +77,7 @@ p {
   height: 68px;
 }
 
-.room__filter, .rooms {
+.rooms {
   width: 98%;
   padding: 4px;
   margin: auto;
@@ -151,4 +151,73 @@ footer {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+}
+
+.main-container {
+  margin: auto;
+  margin-top: 10px;
+  width: 98%;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.search-select {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.search-select select {
+  border: none;
+  background: none;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px;
+  width: 180px;
+}
+
+.container-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+}
+
+.container-pagination span {
+  padding: 4px 8px;
+  cursor: pointer;
+  border: none;
+  width: 12px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container-pagination .disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.container-pagination span:hover:not(.disabled) {
+  background-color: #757575;
+  border-radius: 100%;
+  width: 12px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

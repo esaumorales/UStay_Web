@@ -3,21 +3,38 @@
   <section class="room">
     <h1>ADS</h1>
     <p>Alquila una habitación en lima desde baratas y exclusivas, múdate a un sitio mejor</p>
-    <input list="room" name="room" type="text" class="partner__search" placeholder="Busca partner">
-    <img src="../../../assets/img/icons/ICONS2.svg" alt="" class="icon__search">
-    <datalist id="room">
-      <option value="Cuarto 1">Cuarto 1</option>
-    </datalist>
-    <!-- <button class="button__search">Buscar</button> -->
+    <div class="search-container">
+      <input list="room" name="room" type="text" class="partner__search" placeholder="Busca partner">
+      <img src="../../../assets/img/icons/ICONS2.svg" alt="" class="icon__search">
+      <datalist id="room">
+        <!-- <option value="{{partner.correo_empresa}}">{{partner.correo_empresa}}</option> -->
+      </datalist>
+    </div>
   </section>
   <div class="content">
     <div class="content__filter">
     </div>
     <div class="content__room">
-      <div class="room__filter">
-        <p class="room--order">Ordenar por:</p>
-        <p>Recomendados <img src="../../../assets/img/main/arrow-down-2.png" class="arrow-down-2" alt=""></p>
-      </div>
+      <div class="main-container">
+        <div class="container-search">
+            <span class="title">Título</span>
+            <div class="search-select">
+                <select>
+                    <option>Seleccionar</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="container-pagination">
+            <span class="disabled">«</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>...</span>
+            <span>54</span>
+            <span>»</span>
+        </div>
+    </div>
       <div class="rooms">
         
       </div>

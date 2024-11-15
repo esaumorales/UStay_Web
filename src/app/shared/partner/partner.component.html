@@ -1,32 +1,59 @@
-<div class="container-solicitud">
-    <div class="container-solicitud-text">
-        <h2>Enviar solicitud para ser Partner</h2>
-        <p>Envíanos todos tus datos para poder empezar con este proceso para convertirte en nuestro asociado</p>
-        <form class="container-solicitud-text-form">
-            <input type="text" placeholder="Nombre" required>
-            <input type="text" placeholder="Apellido paterno" required>
-            <input type="text" placeholder="Apellido materno" required>
-            <div class="container-solicitud-text-input-group">
-                <input type="tel" placeholder="Teléfono" required>
-                <input type="text" placeholder="DNI" required>
+<section>
+    <div class="container-solicitud">
+        <div class="container-solicitud-one">
+            <div class="container-solicitud-text">
+                <h2>Postular a Partner</h2>
+                <p>Por favor, envíanos todos tus datos para iniciar</p>
+                <div class="container-solicitud-separation">
+                    <span class="solicitud-span">Subir parte delantera del DNI</span>
+                    <label for="file-upload" class="solicitud-add">
+                        Agregar
+                    </label>
+                    <input id="file-upload" type="file" style="display: none;" (change)="onFileSelected($event)"
+                        [(ngModel)]="partner.img" name="img">
+                </div>
+                <div *ngIf="imagenPrevisualizacion" class="preview">
+                    <i class="fa-solid fa-xmark x"></i>
+                    <img [src]="imagenPrevisualizacion" alt="Previsualización de la imagen" width="60" height="60" />
+                </div>
+                <div class="container-solicitud-separation">
+                    <span class="solicitud-span">Subir parte trasera del DNI</span>
+                    <label for="file-upload2" class="solicitud-add">
+                        Agregar
+                    </label>
+                    <input id="file-upload2" type="file" style="display: none;" (change)="onFileSelected2($event)"
+                        [(ngModel)]="partner.img2" name="img2">
+                </div>
+                <div *ngIf="imagenPrevisualizacion2" class="preview2">
+                    <i class="fa-solid fa-xmark x"></i>
+                    <img [src]="imagenPrevisualizacion2" alt="Previsualización de la imagen" width="60" height="60" />
+                </div>
+                <!-- Aqui se pondra lo demas -->
             </div>
-            <button type="submit">Solicitar</button>
-        </form>
-        <p class="container-solicitud-text-note">
-            Nota: Para validar que es el propietario real, necesitamos una comprobación facial de usted. Cuando le dé a enviar, se le mostrará un código para escanear su rostro a través del celular.
-        </p>
+            <form class="container-solicitud-text-form">
+                <input type="text" placeholder="DNI" [(ngModel)]="partner.dni" name="dni">
+                <input type="text" placeholder="Dirección" [(ngModel)]="partner.direccion" name="direccion">
+                <input type="text" placeholder="Correo de empresa" [(ngModel)]="partner.correo_empresa" name="correo_empresa">
+                <input type="number" placeholder="Teléfono" [(ngModel)]="partner.telefono_empresa" name="telefono_empresa">
+                <button (click)="SolicitarPartner()">Guardar cambios</button>
+            </form>
+        </div>
     </div>
 
     <!-- Sección de Pasos -->
     <div class="container-solicitud-second-container">
-        <span>Conviértase en Partner en unos 5 pasos.</span>
-        <ol class="container-solicitud-second-container-list">
-            <li>Rellene los datos</li>
-            <li>Escanee su rostro</li>
-            <li>Espere a que se  <br> comuniquen con usted</li>
-            <li>Pase por la inspección</li>
-            <li>¡Felicidades, ya eres Partner!</li>
-        </ol>
-        <img src="../../../assets/img/Detective.png" alt="Detective" class="container-solicitud-second-container-detective">
+        <div class="container-solicitud-second-separate">
+            <span class="solicitud-second-text">Conviértase en Partner en unos 5 pasos.</span>
+            <ol class="container-solicitud-second-container-list">
+                <li>Rellene los datos</li>
+                <li>Espere a que se <br> comuniquen con usted</li>
+                <li>Pase por la inspección</li>
+                <li>¡Felicidades, ya eres Partner!</li>
+            </ol>
+        </div>
+        <div class="container-solicitud-second-container-img">
+            <img src="../../../assets/img/Detective.png" alt="Detective"
+                class="container-solicitud-second-container-detective">
+        </div>
     </div>
-</div>
+</section>

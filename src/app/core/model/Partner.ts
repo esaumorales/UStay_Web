@@ -1,6 +1,9 @@
 export interface Partner{
     id: number;
-    dirección: string;
+    direccion: string;
     correo_empresa: string;
-    telefono_empresa: String;   
+    telefono_empresa: String;
+    dni: string;
+    img: string;
+    img2: string;
 }

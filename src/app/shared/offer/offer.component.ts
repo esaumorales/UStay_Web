@@ -19,6 +19,7 @@ export class OfferComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarInmuebles();
+    console.log("Hola")
   }
 
   cargarInmuebles(): void {

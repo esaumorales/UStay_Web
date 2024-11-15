@@ -1,5 +1,7 @@
 <div class="direction">
-    > Direction
+    <a href="/home" style="font-style: none; text-decoration: none; color: #000;">
+        > Home 
+    </a>
 </div>
 <section class="content__information">
     <div class="content__img">
@@ -95,7 +97,9 @@
                                 {{inmueble.edificio.partner.telefono_empresa}}
                             </a>
                         </p>
+                        <a href="https://wa.me/{{inmueble.edificio.partner.telefono_empresa}}" target="_blank" style="text-decoration: none; color: #000">
                         <img src="../../../assets/img/icons/Whatsapp.svg" alt="" style="height: 32px;">
+                        </a>
                     </span>
                     <span style="display: flex; justify-content: space-between; align-items: center; margin: 6px 0;">
                         <p style="margin: 0;">
@@ -170,11 +174,11 @@
             <i class="fa-solid fa-bag-shopping"></i> <a class="see-house">Cuartos similares:</a>
         </div>
         <div class="rooms-similar">
-            @for (inmueble of inmuebles; track $index) {
+            <!-- @for (inmueble of inmuebles; track $index) {
                 <div>
                     <app-department-card [inmueble]="inmueble" class="carousel__item"></app-department-card>
                 </div>
-            }
+            } -->
         </div>
     </footer>
 </section>

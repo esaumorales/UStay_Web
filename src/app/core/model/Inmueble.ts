@@ -8,6 +8,6 @@ export interface Inmueble{
     disponibilidad: boolean;
     n_cuarto: number;
     edificio: Edificio;
-    ilove?: boolean;
+    ilove: boolean;
     urlImg?: string;
 }

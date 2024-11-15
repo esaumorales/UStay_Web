@@ -1,31 +1,27 @@
 <app-header></app-header>
 <div class="contenedor">
+    <div class="navegator__menu">
         <div class="menu">
-                <div class="menu-item header">
+                <a href="/action-bar/" class="menu-item datos">
                     <i class="fas fa-user icon"></i> Datos personales
                     <i class="fas fa-chevron-right arrow"></i>
-                </div>
-                <a href="#" class="menu-item datos">
-                    Text
+                </a>
+                <a href="/action-bar/password" class="menu-item datos">
+                    <i class="fa-regular fa-square-plus icon"></i>Cambiar contraseña
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
-                <a href="#" class="menu-item correo">
-                    Text
-                    <i class="fas fa-chevron-right arrow"></i>
-                </a>
-                <a href="#" class="menu-item partner">
-                    Text
-                    <i class="fas fa-chevron-right arrow"></i>
-                </a>
-                <a href="#" class="menu-item text1">
-                    Text
-                    <i class="fas fa-chevron-right arrow"></i>
-                </a>
-                <a href="#" class="menu-item text2">
-                    Text
+                <a href="/action-bar/password" class="menu-item datos">
+                    <i class="fa-regular fa-square-plus icon"></i>Cambiar correo
                     <i class="fas fa-chevron-right arrow"></i>
                 </a>
             </div>
+            <div class="menu">
+                <a href="/action-bar/solicitud" class="menu-item datos">
+                    <i class="fa-regular fa-square-plus icon"></i>Solicitar Partner
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+            </div>
+        </div>
         <div class="router-outlet">
                 <router-outlet></router-outlet>
         </div>

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { Inmueble } from '../../core/model/Inmueble';
 import { Router } from '@angular/router';
 import { InmuebleService } from '../../services/InmuebleService.service';
+import { Department } from '../../core/index.model';
+import { Edificio } from '../../core/model/Edificio';
 
 
 @Component({
@@ -18,6 +20,8 @@ export class DepartmentCardComponent {
   @Input() hasButtonActions: boolean = false;
 
   constructor(private router: Router, private inmuebleService: InmuebleService) {}
+
+  edificio: Edificio[]=[];
 
   goToDetalle(id: number) {
     this.router.navigate(['/home/room', id]);

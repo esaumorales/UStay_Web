@@ -1,36 +1,40 @@
-.router-outlet{
+.router-outlet {
     margin-top: 25px;
     width: 100%;
 }
+
 .contenedor {
     min-height: 100vh;
     display: flex;
 }
 
+.navegator__menu {
+    display: flex;
+    flex-direction: column;
+}
+
 .menu {
-    margin: 20px;
+    box-sizing: content-box;
+    padding: 8px;
+    margin: 10px 20px 10px 20px;
     width: 200px;
-    height: 340px;
     background-color: #f9f9f9;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.menu-header {
-    background-color: #1a1a2e; /* Color oscuro */
-    color: #fff;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.menu-item:hover .icon {
+    display: block;
+}
+
+.menu-item:active .icon {
+    display: block;
 }
 
 .icon {
     margin-right: 5px;
+    display: none;
 }
 
 .arrow {
@@ -59,4 +63,5 @@
 .menu-item:hover {
     background-color: rgba(1, 11, 26, 1);
     color: #fff;
+    font-weight: 700;
 }

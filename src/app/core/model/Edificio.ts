@@ -1,12 +1,14 @@
 import { Partner } from "./Partner";
+import { Zona } from "./zona";
 
 export interface Edificio{
     id: number;
     referenciaEdificio?: string;
     direccion?: string;
-    n_pisos?: number;
+    npisos: number;
     regla_casa: string;
-    img_edificio: string;
-    url_map: string;
+    imagen: string;
+    urlMap: string;
+    zona:Zona;
     partner: Partner;
 }
