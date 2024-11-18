@@ -27,8 +27,8 @@
         </div>
         <div style="display: flex; flex-direction: column; width: 100%">
             <h2 class="atributes">Zona:</h2>
-            <select [(ngModel)]="edificio.zona" name="zona" class="input2">
-                <option *ngFor="let z of zonas" [ngValue]="z">{{ z.nombreZona }}</option>
+            <select [(ngModel)]="edificio.zona.nombreZona" name="zona." class="input2">
+                <option *ngFor="let z of zonas" [ngValue]="z.nombreZona">{{ z.nombreZona }}</option>
             </select>
             <p>Zona seleccionada: {{ edificio | json }}</p>
 

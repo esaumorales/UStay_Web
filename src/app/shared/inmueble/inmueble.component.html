@@ -1,24 +1,21 @@
 <div class="container-cuartos">
     <div class="cuartos-infad">
         <h1>Cuartos</h1>
-        <button class="disponible-btn">Disponible</button>
+        <button class="disponible-btn" (click)="changedisponibilyty()"
+            [style]="{'background-color': inmueble.disponibilidad ? '#77d604': 'red' }">{{inmueble.disponibilidad ? 'Dipsonible': 'No disponible'}}</button>
     </div>
     <div class="cuartos-disponible">
         <span class="cuartos-span">Información adicional:</span>
-        <button class="cuartos-add">Subir foto</button>
+        <label class="cuartos-add" for="file-upload">Subir foto</label>
+        <input id="file-upload" type="file" style="display: none;">
     </div>
     <div class="cuartos-image">
-        <!-- Aquí se mostrará la lógica de las imágenes cargadas -->
+        
     </div>
     <div class="bettwen">
         <div class="cuartos-crt">
-            <span class="cuartos-span">Nº Cuarto:</span>
-            <select name="numero_cuartos" id="numero_cuartos">
-                <option>Seleccionar</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
+            <label class="cuartos-span">Nº Cuarto:</label>
+            <input type="number" [(ngModel)]="inmueble.n_cuarto" name="n_cuarto">
         </div>
         <div class="cuartos-prd">
             <span class="cuartos-span">Periodo</span>
@@ -29,10 +26,8 @@
             </select>
         </div>
         <div class="cuartos-prc">
-            <span class="cuartos-span">Precio</span>
-            <select name="precio" id="precio">
-                <option>Escriba Aqui</option>
-            </select>
+            <label class="cuartos-span">Precio</label>
+            <input type="number" [(ngModel)]="inmueble.precio" name="precio">
         </div>
     </div>
     <div class="cuartos-servicios">
@@ -42,12 +37,12 @@
     </div>
     <div class="cuartos-inf">
         <label for="inf">Información adicional</label>
-        <textarea rows="8" placeholder="Escriba aquí"></textarea>
+        <textarea rows="8" placeholder="Escriba aquí"[(ngModel)]="inmueble.descripcion" name="descripcion"></textarea>
         <div class="cuartos-btn">
             <button type="button" class="btn btn-bold">B</button>
             <button type="button" class="btn btn-italic">I</button>
             <button type="button" class="btn btn-underline">U</button>
         </div>
     </div>
-    <button type="submit" class="save-btn">Guardar cambios</button>
+    <button type="submit" class="save-btn" (click)="Guardar()">Guardar cambios</button>
 </div>

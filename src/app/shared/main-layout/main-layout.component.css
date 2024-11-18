@@ -155,12 +155,6 @@ footer {
   padding: 10px 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; 
-  gap: 20px;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
 }
 
 .title {
@@ -171,16 +165,15 @@ footer {
 .search-select {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
   padding: 5px;
-  cursor: pointer;
 }
 
 .search-select select {
   border: none;
-  background: none;
   font-size: 12px;
   cursor: pointer;
-  padding: 5px;
   width: 180px;
 }
 
