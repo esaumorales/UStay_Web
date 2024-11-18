@@ -53,8 +53,6 @@ export class PartnerComponent implements OnInit {
 
   onFileSelected2(event: any) {
     this.imagenSeleccionada2 = event.target.files[0];
-  
-    // Generar una URL de previsualización
     if (this.imagenSeleccionada2) {
       const reader = new FileReader();
       reader.onload = () => {
@@ -68,12 +66,12 @@ export class PartnerComponent implements OnInit {
     if (this.imagenSeleccionada && this.imagenSeleccionada2) {
       this.partnerService.addPartner(this.partner, this.imagenSeleccionada, this.imagenSeleccionada2).subscribe(
         response => {
-          console.log('Edificio guardado:', response);
-          alert('Edificio guardado con éxito');
+          console.log('Partner solicitado:', response);
+          alert('Partner guardado con éxito');
         },
         error => {
           console.error('Error al guardar el edificio:', error);
-          alert('Error al guardar el edificio');
+          alert('Error al solicitar Partner');
         }
       );
     } else {

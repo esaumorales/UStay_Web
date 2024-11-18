@@ -120,6 +120,8 @@ export class LoginComponent implements OnInit {
       this.showModal();
       this.router.navigate(['/auth'])
       console.log(data)
+      this.usuario.correo = '';
+      this.usuario.contrasena = '';
     })
   }
 

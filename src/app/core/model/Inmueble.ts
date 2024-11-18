@@ -9,5 +9,6 @@ export interface Inmueble{
     n_cuarto: number;
     edificio: Edificio;
     ilove: boolean;
-    urlImg?: string;
+    imagen: string;
+    imagen2: string;
 }

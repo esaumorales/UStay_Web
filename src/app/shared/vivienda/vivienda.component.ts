@@ -55,8 +55,6 @@ export class ViviendaComponent implements OnInit {
 
   onFileSelected(event: any) {
     this.imagenSeleccionada = event.target.files[0];
-  
-    // Generar una URL de previsualización
     if (this.imagenSeleccionada) {
       const reader = new FileReader();
       reader.onload = () => {
@@ -78,7 +76,7 @@ export class ViviendaComponent implements OnInit {
           alert('Error al guardar el edificio');
         }
       );
-    } else {
+    } else {  
       alert('Por favor, selecciona una imagen');
     }
   }

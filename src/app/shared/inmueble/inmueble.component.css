@@ -174,3 +174,13 @@ textarea {
 .save-btn:hover {
     background-color: #e64a19;
 }
+
+.preview, .preview2{
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    margin: 8px 0;
+    background-color: #f0f0f0;
+    height: 80px;
+    width: 100%;
+}

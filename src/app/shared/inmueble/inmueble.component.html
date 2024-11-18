@@ -7,7 +7,19 @@
     <div class="cuartos-disponible">
         <span class="cuartos-span">Información adicional:</span>
         <label class="cuartos-add" for="file-upload">Subir foto</label>
-        <input id="file-upload" type="file" style="display: none;">
+        <input id="file-upload" type="file" style="display: none;" [(ngModel)]="inmueble.imagen" (change)="onFileSelected($event)">
+    </div>
+    <div *ngIf="imagenPrevisualizacion" class="preview">
+        <i class="fa-solid fa-xmark x"></i>
+        <img [src]="imagenPrevisualizacion" alt="Previsualización de la imagen" width="60" height="60" />
+    </div>
+    <div class="cuartos-disponible" style="justify-content: end;">
+        <label class="cuartos-add" for="file-upload2">Subir foto</label>
+        <input id="file-upload2" type="file" style="display: none;" [(ngModel)]="inmueble.imagen2" (change)="onFileSelected2($event)">
+    </div>
+    <div *ngIf="imagenPrevisualizacion2" class="preview2">
+        <i class="fa-solid fa-xmark x"></i>
+        <img [src]="imagenPrevisualizacion2" alt="Previsualización de la imagen" width="60" height="60" />
     </div>
     <div class="cuartos-image">
         
