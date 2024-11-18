@@ -17,26 +17,22 @@
     <div class="content__room">
       <div class="main-container">
         <div class="container-search">
-            <span class="title">Título</span>
-            <div class="search-select">
-                <select>
-                    <option>Seleccionar</option>
-                </select>
-            </div>
+          <span class="title">Título</span>
+          <div class="search-select">
+            <select>
+              <option>Seleccionar</option>
+            </select>
+          </div>
         </div>
-    
-        <div class="container-pagination">
-            <span class="disabled">«</span>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>...</span>
-            <span>54</span>
-            <span>»</span>
-        </div>
-    </div>
+        <!-- <div class="container-pagination">
+        </div> -->
+      </div>
       <div class="rooms">
-        
+        @for (inmueble of inmuebles; track $index){
+        <div class="carousel__item">
+          <app-department-card [inmueble]="inmueble"></app-department-card>
+        </div>
+        }
       </div>
       <div class="paginator">
       </div>
@@ -49,7 +45,8 @@
       </h1>
       <p style="font-size: 16px; font-weight: 100;">
         Conviértete en nuestro partner y accede a una amplia gama de beneficios exclusivos. Publica y promociona
-        nuestros servicios de alquiler de habitaciones y departamentos y sé parte de una alianza estratégica que impulsará tus
+        nuestros servicios de alquiler de habitaciones y departamentos y sé parte de una alianza estratégica que
+        impulsará tus
         servicios de alojamiento
       </p>
       <button class="button__solicitar">Solicitar</button>

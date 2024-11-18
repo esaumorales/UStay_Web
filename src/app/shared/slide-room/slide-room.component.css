@@ -1,0 +1,97 @@
+.slide__image {
+    position: relative;
+    height: 520px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide__footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer__elements {
+    position: relative;
+    padding: 12px;
+    height: 100px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.elements {
+    box-sizing: content-box;
+    padding: 2px 0;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.tipo {
+    padding: 5px;
+    align-self: flex-end;
+}
+
+.elements1 {
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+    height: 50%;
+}
+
+.avatar {
+    display: flex;
+    gap: 4px;
+    padding: 0 4px;
+    align-items: center;
+    min-width: 130px;
+}
+
+.avatar_img{
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+.elements2{
+    gap: 20px;
+    padding-left: 40px;
+    justify-content: space-around;
+}
+
+.items-elements{
+    display: flex;
+    align-items: center;
+
+}
+
+.heart{
+    padding: 0 8px;
+}
+
+.price{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Abhaya Libre';   
+    width: 180px;
+    font-size: 24px;
+}
+
+.periodo{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 4px;
+    width: 100px;
+    border-radius: 4px;
+    font-family: 'Inter_28pt';
+    font-size: 16px;
+    background-color: #ff4a4a;
+    font-weight: 900;
+}

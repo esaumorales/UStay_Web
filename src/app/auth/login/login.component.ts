@@ -87,7 +87,6 @@ export class LoginComponent implements OnInit {
   }
 
   Guardar1() {
-
     if (this.datosIngresados()) {
       this.Guardar();
     } else {

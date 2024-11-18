@@ -1,0 +1,46 @@
+<article class="slide">
+    <div class="slide__image" [style]="'background-image: url(' + inmueble.edificio.imagen + ');'"
+        (click)="goToDetalle(inmueble.id)">
+        @if (sequence != undefined) {
+        <div class="slide__image--order">
+            <span>{{ sequence +1 }}</span>
+        </div>
+        }
+    </div>
+    <div class="slide__footer">
+        <div class="footer__elements">
+            <span class="elements tipo">
+                <i class="fa-solid fa-house"></i>
+                Tipo
+            </span>
+        </div>
+        <div class="footer__elements" style="display: flex; flex-direction: column; gap: 4px;">
+            <div class="elements1">
+                <span class="elements avatar">
+                    @if (inmueble.edificio.imagen){
+                    <div class="avatar_img" [style]="'background-image: url(' + inmueble.edificio.imagen + ');'">
+                    </div>
+                    } @else {
+                    <div class="avatar_img" style="background-color: #ccc;">
+                    </div>
+                }
+                {{inmueble.id}}
+                </span>
+            </div>
+            <div class="elements1 elements2">
+                <div class="elements items-elements">
+                    <i class="fa-regular fa-heart fs-5 heart"></i>
+                </div>
+                <div class="elements items-elements" style="width: 80px; justify-content: center; padding: 0 4px;">
+                    <i class="fa-solid fa-star fs-56" style="color: yellow;"></i> S/. {{inmueble.precio || 0.0}}
+                </div>
+                <div class="elements items-elements price">
+                    S/. {{inmueble.precio}} 
+                    <div class="periodo">
+                        {{ inmueble.disponibilidad ? 'Disponible' : 'No disponible' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

@@ -6,4 +6,5 @@ export interface Partner{
     dni: string;
     img: string;
     img2: string;
+    
 }

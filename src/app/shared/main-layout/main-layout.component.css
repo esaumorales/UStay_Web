@@ -56,7 +56,6 @@ p {
 .content {
   width: 100%;
   min-height: 800px;
-  background-color: #e9e9e9;
   display: flex;
 }
 
@@ -70,7 +69,6 @@ p {
 
 .content__room {
   width: 100%;
-  background-color: red;
 }
 
 .room__filter{
@@ -78,14 +76,15 @@ p {
 }
 
 .rooms {
+  display: flex;
+  gap: 8px;
   width: 98%;
   padding: 4px;
   margin: auto;
   margin: 12px;
   box-sizing: border-box;
   border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 0 8px 0 #cdcdcd;
+  min-height: 500px;
 }
 
 .room--order {
@@ -101,10 +100,6 @@ p {
   padding-right: 4px;
 }
 
-.rooms{
-  min-height: 500px;
-  background-color: green;
-}
 
 .paginator{
   width: 98%;
@@ -220,4 +215,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.carousel__item {
+  display: flex;
+  flex-direction: row;
+  width: 280px;
+  box-sizing: border-box;
 }

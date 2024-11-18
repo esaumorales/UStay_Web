@@ -30,13 +30,13 @@
     left: 20px;
     padding: 16px;
     background-color: #fff;
-    max-width:750px;
+    max-width: 750px;
     height: 400px;
     box-shadow: 0 0 16px 0 #77d604;
     border-radius: 12px;
 }
 
-.user--information{
+.user--information {
     height: 60px;
     padding: 8px;
     display: flex;
@@ -47,18 +47,18 @@
     font-weight: 900;
 }
 
-.user--img{
+.user--img {
     border-radius: 50%;
     height: 40px;
     width: 40px;
 }
 
-.information--room{
+.information--room {
     display: flex;
     justify-content: space-between;
 }
 
-.room--price{
+.room--price {
     position: relative;
     padding: 8px;
     display: flex;
@@ -71,7 +71,7 @@
     font-weight: 900;
 }
 
-.period{
+.period {
     margin: 50px 0 0 10px;
     display: flex;
     align-items: center;
@@ -85,18 +85,18 @@
     color: #fff;
 }
 
-p{
+p {
     margin: 0;
 }
 
-.address{
+.address {
     margin: 0 8px;
     font-family: 'Inter';
     font-size: 16px;
     text-decoration: underline;
 }
 
-.room--disponibility{
+.room--disponibility {
     min-height: 120px;
     width: 50%;
     display: flex;
@@ -105,7 +105,7 @@ p{
     padding: 20px;
 }
 
-.disponibility{
+.disponibility {
     /* background-color: #77d604; */
     height: 40px;
     width: 140px;
@@ -119,12 +119,12 @@ p{
     color: #fff;
 }
 
-.descripcion{
+.descripcion {
     margin: 4px 0;
     font-size: 20px;
 }
 
-.information--descripcion{
+.information--descripcion {
     margin-top: 4px;
     font-family: 'Inter';
     font-size: 16px;
@@ -217,7 +217,7 @@ table {
     font-size: 16px;
     width: 100%;
 }
-  
+
 
 td {
     font-family: 'Inter';
@@ -291,7 +291,7 @@ table tr:nth-child(even) {
     display: flex;
 }
 
-.footer__room{
+.footer__room {
     /* background-color: red; */
     display: flex;
     align-items: center;
@@ -300,21 +300,21 @@ table tr:nth-child(even) {
 }
 
 .rooms-similar {
-    background-color: blue;
+    display: flex;
+    gap: 12px;
     padding: 5px;
+    min-height: 100px;
 }
 
 .servicios {
     width: 100%;
 }
 
-.carousel__item{
-    background-color: red;
-    margin: 20px;
-    max-width: 200px;
-    height: 280px;
+.carousel__item {
+    display: flex;
+    gap: 12px;
 }
 
-i{
+i {
     margin: 0 4px;
 }

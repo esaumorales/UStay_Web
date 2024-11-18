@@ -13,31 +13,33 @@
         <img class="offer__content--before" src="/assets/img/offer/content/honeycomb-content-offer.webp" alt="">
         <article class="motivator">
             <div class="motivator__title">
-                <img class="motivator__title--border-top" src="/assets/img/offer/content/top-border-content-offer.png" alt="">
-                <img class="motivator__title--border-bottom" src="/assets/img/offer/content/bottom-border-content-offer.png" alt="">
+                <img class="motivator__title--border-top" src="/assets/img/offer/content/top-border-content-offer.png"
+                    alt="">
+                <img class="motivator__title--border-bottom"
+                    src="/assets/img/offer/content/bottom-border-content-offer.png" alt="">
                 <h3>Encuentra el Espacio<br>Perfecto para Ti</h3>
             </div>
-            <img class="motivator__img" src="/assets/img/offer/content/girl-content-offer.webp" alt="mujeres motivadoras">
+            <img class="motivator__img" src="/assets/img/offer/content/girl-content-offer.webp"
+                alt="mujeres motivadoras">
             <span class="motivator__phrase">Alquiler de habitaciones cómodas y accesibles</span>
         </article>
         <div class="divider"></div>
         <main class="carousel">
-            <img (click)="nextItem(-1)" class="carousel__icon--left" src="/assets/img/offer/content/arrow-left.svg" alt="">
             <div class="carousel__content">
-                <div class="carousel__track" [style]="'grid-template-columns: repeat(' + inmuebles.length + ', 280px); transform: translateX(calc(250px * -' + selectedIndex +'))'">
+                <div class="carousel__track"
+                    [style]="'grid-template-columns: repeat(' + inmuebles.length + ',); transform: translateX(calc(100% * -' + currentIndex +'))'">
                     @for (inmueble of inmuebles; track $index) {
-                        <div class="carousel__item">
-                            <app-department-card [inmueble]="inmueble"></app-department-card>
-                        </div>
+                    <div class="carousel__item">
+                        <app-slide-room [inmueble]="inmueble"></app-slide-room>
+                    </div>
                     }
                 </div>
-                <ul class="timer">
-                    @for (inmueble of inmuebles; track $index) {
-                        <li (click)="selectedIndex = $index" [class]="'timer__item ' + ($index == selectedIndex ? 'active' : '')"></li>
-                    }
-                </ul>
             </div>
-            <img (click)="nextItem(1)" class="carousel__icon--right" src="/assets/img/offer/content/arrow-right.svg" alt="">
+            <div class="pagination1">
+                <span class="pagination__arrow1" (click)="rotateLeft()">&#10094;</span>
+                <div class="dot-carousel"></div>
+                <span class="pagination__arrow2" (click)="rotateRight()">&#10095;</span>
+            </div>
         </main>
     </div>
 </section>

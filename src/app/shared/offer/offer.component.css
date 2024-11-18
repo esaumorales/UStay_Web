@@ -156,7 +156,9 @@ section{
 }
 
 .carousel {
-    display: grid;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: auto 1fr auto;
     align-items: center;
 }
@@ -186,24 +188,23 @@ section{
 }
 
 .carousel__content {
-    overflow: hidden;
-}
-
-.carousel__track {
-    display: grid;
-    grid-template-rows: 1fr;
-    gap: 10px;
-    transition: transform .3s;
-    -webkit-transition: transform .3s;
-    -moz-transition: transform .3s;
-    -ms-transition: transform .3s;
-    -o-transition: transform .3s;
-}
-
-.carousel__item {
     position: relative;
-    /* width: 250px; */
-}
+    overflow: hidden; /* Oculta los elementos fuera del contenedor principal */
+    width: 100%; /* Asegura que el carrusel ocupe el 100% del ancho del contenedor */
+  }
+
+  .carousel__track {
+    position: relative;
+    display: flex; /* Flexbox para organizar los elementos en línea */
+    transition: 0.4s ease-in-out; /* Para animaciones al mover el carrusel */
+    width: 100%; /* Asegura que el track tenga el tamaño completo */
+  }
+  
+  .carousel__item {
+    flex: 0 0 100%; /* Cada elemento ocupa el 100% del contenedor */
+    max-width: 100%; /* Evita que se expanda más allá del contenedor */
+    box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño */
+  }
 
 .timer {
     margin-bottom: 0;
@@ -267,4 +268,69 @@ section{
     .offer__header--before {
         height: 30px;
     }
+}
+
+.pagination1 {
+    position: absolute;
+    bottom: 60px;
+    margin-top: 15px;
+    padding:  8px;
+    background-color: white;
+    border-radius: 9px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+
+.pagination__arrow1 {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #333;
+    margin-left: 6px; /* Controla la separación entre las flechas y los puntos */
+    margin-right: 25px; /* Controla la separación entre las flechas y los puntos */
+    padding: 0; /* Asegúrate de que no haya padding en las flechas */
+}
+.pagination__arrow2 {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #333;
+    margin-left: 25px; /* Controla la separación entre las flechas y los puntos */
+    margin-right: 6px; /* Controla la separación entre las flechas y los puntos */
+    padding: 0; /* Asegúrate de que no haya padding en las flechas */
+}
+
+
+.dot-carousel {
+    position: relative;
+    left: -9999px;
+    /* Evita que los puntos se desplacen fuera del contenedor */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff6600;
+    box-shadow:
+        9984px 0 0 -2px #ccc,
+        9999px 0 0 0px #ff6600,
+        10014px 0 0 -2px #ccc;
+    transition: box-shadow 0.6s ease;
+
+}
+
+.slide__footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: red;
 }

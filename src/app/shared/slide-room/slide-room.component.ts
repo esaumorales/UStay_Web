@@ -1,28 +1,25 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Inmueble } from '../../core/model/Inmueble';
-import { Router } from '@angular/router';
 import { InmuebleService } from '../../services/InmuebleService.service';
-import { Department } from '../../core/index.model';
 import { Edificio } from '../../core/model/Edificio';
-
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-department-card',
+  selector: 'app-slide-room',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './department-card.component.html',
-  styleUrl: './department-card.component.css'
+  templateUrl: './slide-room.component.html',
+  styleUrl: './slide-room.component.css'
 })
-export class DepartmentCardComponent {
+export class SlideRoomComponent {
   @Input({ required: true }) inmueble!: Inmueble;
   @Input() sequence!: number;
   @Input() hasButtonActions: boolean = false;
 
-  constructor(
-    private router: Router
-  ) {}
+  constructor(private router: Router, private inmuebleService: InmuebleService) {}
 
+  edificio: Edificio[]=[];
 
   goToDetalle(id: number) {
     this.router.navigate(['/home/room', id]);
