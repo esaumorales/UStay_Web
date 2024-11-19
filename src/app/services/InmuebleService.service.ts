@@ -2,21 +2,22 @@ import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Inmueble } from "../core/model/Inmueble";
+import { environment } from "../../environments/environment";
 
 @Injectable({providedIn: 'root'})
 export class InmuebleService {
     
     private readonly _http = inject(HttpClient);
 
-    private readonly apiInmueble = 'http://localhost:8864/inmueble';
+    private readonly apiInmueble = `${environment.API_URL}http://localhost:8864/inmueble`;
 
     
     getAllInmuebles(): Observable<any>{
-        return this._http.get(this.apiInmueble+"/listar")
+        return this._http.get(this.apiInmueble+`/listar`)
     }
 
     getInmueble(id:number): Observable<any>{
-        return this._http.get(this.apiInmueble+"/listar/"+id)
+        return this._http.get(this.apiInmueble+`/listar/`+id)
     }
 
     addInmueble(inmueble: Inmueble, imagen: File, imagen2: File): Observable<any>{

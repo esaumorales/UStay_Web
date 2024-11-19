@@ -2,21 +2,22 @@ import { HttpClient } from "@angular/common/http";
 import { inject, Inject, Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Edificio } from "../core/model/Edificio";
+import { environment } from "../../environments/environment";
 
 @Injectable({providedIn: 'root'})
 export class EdificioService{
 
     private readonly _http = inject(HttpClient);
 
-    private readonly apiEdifico = 'http://localhost:8864/api/edificio';
+    private readonly apiEdifico = `${environment.API_URL}/api/edificio`;
 
     
     getAllEdificios(): Observable<any>{
-        return this._http.get(this.apiEdifico+"/listar")
+        return this._http.get(this.apiEdifico+`/listar`)
     }
 
     getEdificio(id:number): Observable<any>{
-        return this._http.get(this.apiEdifico+"/listar/"+id)
+        return this._http.get(this.apiEdifico+`/listar/`+id)
     }
 
 
