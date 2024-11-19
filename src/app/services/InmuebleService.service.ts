@@ -9,7 +9,7 @@ export class InmuebleService {
     
     private readonly _http = inject(HttpClient);
 
-    private readonly apiInmueble = `${environment.API_URL}http://localhost:8864/inmueble`;
+    private readonly apiInmueble = `${environment.API_URL}/inmueble`;
 
     
     getAllInmuebles(): Observable<any>{
